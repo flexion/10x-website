@@ -81,9 +81,9 @@ const getFileData = (filePath) => {
  * Append a file with metadata
  * @param {*} file
  */
-const addContentMetaData = (filename, filePath) => {
+const addContentMetaData = (filename, filePath, collection) => {
   const fileData = getFileData(path.join(filePath, filename));
-  fileData.type = fileData.name;
+  fileData.type = collection.name;
   fileData.name = filename.replace(/\.json/, "");
   fileData.path = `/${
     excludedPathTypes.includes(fileData.type) ? "" : `${fileData.type}/`
@@ -162,7 +162,7 @@ const indexContent = () => {
         (filename) => filename !== "index.json" && filename.includes(".json")
       );
     const contentIndex = contents.map((filename) => {
-      const data = addContentMetaData(filename, collectionPath);
+      const data = addContentMetaData(filename, collectionPath, collection);
       writeFile(data, path.join(collectionPath, filename));
       return data;
     });
