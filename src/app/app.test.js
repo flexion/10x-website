@@ -1,11 +1,8 @@
 import app from "./index.js";
-
 import { initialState as content } from "app/ContentModule";
-import { initialState as swapi } from "app/SwapiModule";
 
 const combinedState = {
   content,
-  swapi,
 };
 
 describe("app", () => {

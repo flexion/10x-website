@@ -3,8 +3,9 @@ const timeout = (t = 1000) => {
   return new Promise((resolve) => setTimeout(resolve, t));
 };
 
-export const getAllByContentType = async (type) => {
+export const getAllByContentType = async (props) => {
   await timeout();
+  const { type } = props;
   const response = await fetch(
     `${process.env.PUBLIC_URL}/content/${type}/index.json`
   );
@@ -12,8 +13,9 @@ export const getAllByContentType = async (type) => {
   return data;
 };
 
-export const getContentTypeByName = async (type, slug) => {
+export const getContentTypeByName = async (props) => {
   await timeout();
+  const { type, slug } = props;
   const response = await fetch(
     `${process.env.PUBLIC_URL}/content/${type}/${slug}.json`
   );
@@ -21,8 +23,9 @@ export const getContentTypeByName = async (type, slug) => {
   return data;
 };
 
-export const getTaxonomyByContentType = async (type) => {
+export const getTaxonomyByContentType = async (props) => {
   await timeout();
+  const { type } = props;
   const response = await fetch(
     `${process.env.PUBLIC_URL}/content/${type}/taxonomy.json`
   );

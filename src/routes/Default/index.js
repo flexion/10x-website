@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import { Grid, Row, Col } from "components/Grid";
-import SWFilms from "features/SWFilms";
+import PageList from "features/PageList";
 
 const Default = () => {
   return (
@@ -15,7 +15,7 @@ const Default = () => {
       </Row>
       <Row>
         <Col size={12}>
-          <SWFilms />
+          <PageList />
         </Col>
       </Row>
     </Grid>
