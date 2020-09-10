@@ -11,9 +11,16 @@ import * as serviceWorker from "./serviceWorker";
 import Primary from "templates/Primary";
 
 library.add(far, fas);
+
+if (process.env.NODE_ENV !== "production") {
+  const axe = require("react-axe");
+  axe(React, ReactDOM, 1000);
+}
+
+const basename = process.env.PUBLIC_URL || "/";
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename={basename}>
       <Provider store={store}>
         <Primary>
           <Routes />

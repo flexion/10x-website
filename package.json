@@ -79,6 +79,7 @@
   },
   "devDependencies": {
     "enzyme-adapter-react-16": "^1.15.4",
+    "react-axe": "^3.5.3",
     "yaml": "^1.10.0"
   }
 }
