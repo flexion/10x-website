@@ -1,10 +1,9 @@
 backend:
   name: github
-  repo: GSA/ai-experience-sharing-platform
+  repo: flexion/10x-website
   base_url: https://github.com
   auth_endpoint: external/auth/github
   branch: content
-  preview_context: federalist/build
 
 media_folder: public/images
 public_folder: /images
