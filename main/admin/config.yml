@@ -1,7 +1,6 @@
 backend:
   name: github
   repo: flexion/10x-website
-  base_url: https://github.com
   branch: content
 
 media_folder: public/images
