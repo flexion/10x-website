@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/10x-website/master/static/css/main.334271bb.chunk.css",
+    "main.js": "/10x-website/master/static/js/main.47e10fe5.chunk.js",
+    "main.js.map": "/10x-website/master/static/js/main.47e10fe5.chunk.js.map",
+    "runtime-main.js": "/10x-website/master/static/js/runtime-main.f224795c.js",
+    "runtime-main.js.map": "/10x-website/master/static/js/runtime-main.f224795c.js.map",
+    "static/js/2.73c28df4.chunk.js": "/10x-website/master/static/js/2.73c28df4.chunk.js",
+    "static/js/2.73c28df4.chunk.js.map": "/10x-website/master/static/js/2.73c28df4.chunk.js.map",
+    "index.html": "/10x-website/master/index.html",
+    "precache-manifest.6a37164bdb226a7f9b0c0b63d43cc693.js": "/10x-website/master/precache-manifest.6a37164bdb226a7f9b0c0b63d43cc693.js",
+    "service-worker.js": "/10x-website/master/service-worker.js",
+    "static/css/main.334271bb.chunk.css.map": "/10x-website/master/static/css/main.334271bb.chunk.css.map",
+    "static/js/2.73c28df4.chunk.js.LICENSE.txt": "/10x-website/master/static/js/2.73c28df4.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/10x-website/master/static/media/youtube15.9d356b3b.svg",
+    "static/media/logo.svg": "/10x-website/master/static/media/logo.5047b988.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f224795c.js",
+    "static/js/2.73c28df4.chunk.js",
+    "static/css/main.334271bb.chunk.css",
+    "static/js/main.47e10fe5.chunk.js"
+  ]
+}
