@@ -2,13 +2,11 @@ backend:
   name: github
   repo: flexion/10x-website
   base_url: https://github.com
-  auth_endpoint: external/auth/github
   branch: content
 
 media_folder: public/images
 public_folder: /images
 publish_mode: editorial_workflow
-logo_url: https://federalist.18f.gov/assets/images/federalist-logo.png
 
 collections:
   - name: settings
