@@ -67,11 +67,13 @@ Step 3 is important because it will allow )Auth requests from the github pages d
 
 The prebuild workflow is responsible for mutating and indexing the content JSON files to add meta data and make them deliverable in list fashion to the UI.
 
-The ideal solution would be to implement this step as part of a hook in the NetlifyCMS workflow. This solution is still in [beta](https://www.netlifycms.org/docs/beta-features/#registering-to-cms-events).
+The ideal solution would be to implement this step as part of a hook in the NetlifyCMS workflow. This solution is still in [beta](https://www.netlifycms.org/docs/beta-features/#registering-to-cms-events), but should be considered for future development.
 
 ## React/Redux
 
 ### Components
+
+Components are the base level reusable nodes. (buttons, inputs, etc.) These modules will most likely be React implementations of the USWDS.
 
 ### App
 
