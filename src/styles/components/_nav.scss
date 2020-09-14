@@ -1,0 +1,15 @@
+.usa-nav {
+  &__url {
+    @include u-font("sans", "md");
+    font-weight: 300 !important;
+    &:after {
+      height: 0.05em !important;
+      bottom: 0.5em !important;
+    }
+    &:hover {
+      &:after {
+        height: 0.1em !important;
+      }
+    }
+  }
+}

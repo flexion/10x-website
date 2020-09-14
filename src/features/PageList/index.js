@@ -19,15 +19,11 @@ const PageList = ({ type = "page" }) => {
   if (!data.length) {
     return <h1>No content found.</h1>;
   }
-  return (
-    <div>
-      {data.map((item, i) => (
-        <h1 className="PageList__item" key={`PageList-${i}`}>
-          {item.title}
-        </h1>
-      ))}
-    </div>
-  );
+  return data.map((item, i) => (
+    <h1 className="PageList__item" key={`PageList-${i}`}>
+      {item.title}
+    </h1>
+  ));
 };
 
 PageList.propTypes = {
