@@ -46,11 +46,11 @@ const Nav = ({ items }) => {
   return (
     <nav role="navigation" aria-label="Primary navigation" className="usa-nav">
       <div className="usa-nav__inner">
-        <Button type="button" variant="url" className="usa-nav__close">
+        <Button type="button" className="usa-nav__close">
           <img src={close} alt="close" />
         </Button>
         <ul className="usa-accordion usa-nav__primary">
-          {items.map(({ text = "", url = "", items = [] }, idx) => {
+          {items.map(({ text, url, items }, idx) => {
             return (
               <NavItem
                 key={`usa-nav-item-${idx}`}
