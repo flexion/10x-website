@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Grid, Row, Col } from "components/Grid";
 import Banner from "components/Banner";
+import { Link } from "react-router-dom";
 
 const Header = ({ logo, nav }) => {
   return (
@@ -11,7 +12,9 @@ const Header = ({ logo, nav }) => {
           <Col>
             <Banner />
             <Row className="align-content-center margin-top-2">
-              <Col size={3}>{logo}</Col>
+              <Col size={3}>
+                <Link to="/">{logo}</Link>
+              </Col>
               <Col size={9} className="text-right">
                 {nav}
               </Col>
