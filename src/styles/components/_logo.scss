@@ -4,5 +4,9 @@
     display: inline-block;
     font-size: 3rem;
     border-bottom: 8px solid black;
+    &:hover {
+      cursor: pointer;
+      border-bottom: 8px solid red;
+    }
   }
 }

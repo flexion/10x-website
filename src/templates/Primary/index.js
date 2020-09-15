@@ -7,10 +7,10 @@ import Logo from "components/Logo";
 
 const Primary = ({ children }) => {
   const navItems = [
-    { url: "/", text: "About 10x" },
-    { url: "/", text: "Send us an idea" },
-    { url: "/", text: "The 10x process" },
-    { url: "/", text: "The projects" },
+    { url: "/about", text: "About 10x" },
+    { url: "/ideas", text: "Send us an idea" },
+    { url: "/process", text: "The 10x process" },
+    { url: "/projects", text: "The projects" },
   ];
   return (
     <div className="App">

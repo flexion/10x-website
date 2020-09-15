@@ -8,6 +8,7 @@ const Default = () => {
       <Row>
         <Col size={12}>
           <div style={{ paddingTop: "5vh", minHeight: "50vh" }}>
+            <h1>Fund your idea</h1>
             <PageList />
           </div>
         </Col>

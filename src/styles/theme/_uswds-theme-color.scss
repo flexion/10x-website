@@ -32,7 +32,7 @@ $theme-color-base: "gray-cool-50";
 $theme-color-base-dark: "gray-cool-60";
 $theme-color-base-darker: "gray-cool-70";
 $theme-color-base-darkest: "gray-90";
-$theme-color-base-ink: "gray-90";
+$theme-color-base-ink: #000000;
 
 // Primary colors
 $theme-color-primary-family: #000000;
@@ -61,7 +61,7 @@ $theme-color-accent-warm-family: "orange";
 $theme-color-accent-warm-lightest: false;
 $theme-color-accent-warm-lighter: "orange-10";
 $theme-color-accent-warm-light: "orange-20v";
-$theme-color-accent-warm: "orange-30v";
+$theme-color-accent-warm: #d93f04;
 $theme-color-accent-warm-dark: "orange-50v";
 $theme-color-accent-warm-darker: "orange-60";
 $theme-color-accent-warm-darkest: false;
@@ -71,9 +71,9 @@ $theme-color-accent-cool-family: "blue-cool";
 $theme-color-accent-cool-lightest: false;
 $theme-color-accent-cool-lighter: "blue-cool-5v";
 $theme-color-accent-cool-light: "blue-cool-20v";
-$theme-color-accent-cool: "cyan-30v";
+$theme-color-accent-cool: #7560eb;
 $theme-color-accent-cool-dark: "blue-cool-40v";
-$theme-color-accent-cool-darker: "blue-cool-60v";
+$theme-color-accent-cool-darker: #433a7a;
 $theme-color-accent-cool-darkest: false;
 
 /*

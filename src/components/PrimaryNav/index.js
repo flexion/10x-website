@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
+import classnames from "classnames";
 import { Link, NavLink } from "react-router-dom";
-import close from "uswds/dist/img/close.svg";
+import close from "./close.svg";
 import Button from "components/Button";
-import "uswds";
 
 const NavItem = ({ id, text, url, items = [] }) => {
   return (
@@ -43,27 +43,40 @@ const NavItem = ({ id, text, url, items = [] }) => {
 };
 
 const Nav = ({ items }) => {
+  const [isOpen, setOpen] = useState(false);
+  const handleClick = () => {
+    setOpen((state) => !state);
+  };
   return (
-    <nav role="navigation" aria-label="Primary navigation" className="usa-nav">
-      <div className="usa-nav__inner">
-        <Button type="button" className="usa-nav__close">
-          <img src={close} alt="close" />
-        </Button>
-        <ul className="usa-accordion usa-nav__primary">
-          {items.map(({ text, url, items }, idx) => {
-            return (
-              <NavItem
-                key={`usa-nav-item-${idx}`}
-                id={idx}
-                text={text}
-                url={url}
-                items={items}
-              />
-            );
-          })}
-        </ul>
-      </div>
-    </nav>
+    <>
+      <Button type="button" onClick={handleClick} className="usa-nav-open">
+        Menu
+      </Button>
+      <nav
+        role="navigation"
+        aria-label="Primary navigation"
+        className={classnames({ "usa-nav": true, "is-visible": isOpen })}
+      >
+        <div className="usa-nav__inner">
+          <Button type="button" className="usa-nav-close" onClick={handleClick}>
+            <img src={close} alt="close" />
+          </Button>
+          <ul className="usa-accordion usa-nav__primary">
+            {items.map(({ text, url, items }, idx) => {
+              return (
+                <NavItem
+                  key={`usa-nav-item-${idx}`}
+                  id={idx}
+                  text={text}
+                  url={url}
+                  items={items}
+                />
+              );
+            })}
+          </ul>
+        </div>
+      </nav>
+    </>
   );
 };
 

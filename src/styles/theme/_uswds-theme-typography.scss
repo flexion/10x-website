@@ -77,7 +77,7 @@ Relative font file path
 ----------------------------------------
 */
 
-$theme-font-path: "~uswds/dist/fonts";
+$theme-font-path: "~styles/theme/fonts";
 
 /*
 ----------------------------------------
@@ -122,12 +122,33 @@ names to something more descriptive.
 */
 
 $theme-typeface-tokens: (
-  example-serif-token: (
-    display-name: "Example Serif Display Name",
-    cap-height: 364px,
-  ),
-  example-sans-token: (
-    display-name: "Example Sans Display Name",
+  united-sans: (
+    display-name: "United Sans Web",
+    src: (
+      dir: "united-sans",
+      roman: (
+        100: "UnitedSans-Thin",
+        200: "UnitedSans-ExtraLight",
+        300: "UnitedSans-Light",
+        400: "UnitedSans-Regular",
+        500: "UnitedSans-Medium",
+        600: "UnitedSans-SemiBold",
+        700: "UnitedSans-Bold",
+        800: "UnitedSans-ExtraBold",
+        900: "UnitedSans-Black",
+      ),
+      italic: (
+        100: "UnitedSans-ThinItalic",
+        200: "UnitedSans-ExtraLightItalic",
+        300: "UnitedSans-LightItalic",
+        400: "UnitedSans-Italic",
+        500: "UnitedSans-MediumItalic",
+        600: "UnitedSans-SemiBoldItalic",
+        700: "UnitedSans-BoldItalic",
+        800: "UnitedSans-ExtraBoldItalic",
+        900: "UnitedSans-BlackItalic",
+      ),
+    ),
     cap-height: 364px,
   ),
 );
@@ -167,7 +188,7 @@ $theme-font-type-lang: false;
 $theme-font-type-mono: "roboto-mono";
 
 // sans-serif
-$theme-font-type-sans: "source-sans-pro";
+$theme-font-type-sans: "united-sans";
 
 // serif
 $theme-font-type-serif: "merriweather";
@@ -198,7 +219,7 @@ $theme-font-cond-custom-stack: false;
 $theme-font-icon-custom-stack: false;
 $theme-font-lang-custom-stack: false;
 $theme-font-mono-custom-stack: false;
-$theme-font-sans-custom-stack: false;
+$theme-font-sans-custom-stack: "United Sans Web", United Sans Web;
 $theme-font-serif-custom-stack: false;
 
 /*
@@ -284,7 +305,7 @@ tokens.
 */
 
 $theme-font-role-ui: "sans";
-$theme-font-role-heading: "serif";
+$theme-font-role-heading: "sans";
 $theme-font-role-body: "sans";
 $theme-font-role-code: "mono";
 $theme-font-role-alt: "serif";
@@ -319,13 +340,13 @@ Or use `false` for unneeded weights.
 ----------------------------------------
 */
 
-$theme-font-weight-thin: false;
+$theme-font-weight-thin: 200;
 $theme-font-weight-light: 300;
 $theme-font-weight-normal: 400;
-$theme-font-weight-medium: false;
-$theme-font-weight-semibold: false;
+$theme-font-weight-medium: 500;
+$theme-font-weight-semibold: 600;
 $theme-font-weight-bold: 700;
-$theme-font-weight-heavy: false;
+$theme-font-weight-heavy: 900;
 
 // If USWDS is generating your @font-face rules,
 // should we generate all available weights
@@ -399,7 +420,7 @@ $theme-body-line-height: 5;
 $theme-style-body-element: false;
 
 // Headings
-$theme-h1-font-size: "2xl";
+$theme-h1-font-size: "3xl";
 $theme-h2-font-size: "xl";
 $theme-h3-font-size: "lg";
 $theme-h4-font-size: "sm";

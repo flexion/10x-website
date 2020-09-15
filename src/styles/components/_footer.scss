@@ -1,7 +1,4 @@
 .usa-footer {
-  > .grid-container {
-    @include u-width(880px);
-  }
   @include u-padding-top(5);
   @include u-bg("primary-dark");
   @include u-text("white");

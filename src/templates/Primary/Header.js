@@ -11,8 +11,10 @@ const Header = ({ logo, nav }) => {
           <Col>
             <Banner />
             <Row className="align-content-center margin-top-2">
-              <Col desktop={3}>{logo}</Col>
-              <Col desktop={9}>{nav}</Col>
+              <Col size={3}>{logo}</Col>
+              <Col size={9} className="text-right">
+                {nav}
+              </Col>
             </Row>
           </Col>
         </Row>
