@@ -1,0 +1,117 @@
+.Loading {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 8px solid white;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-duration: 5s;
+}
+.box-one {
+  border-color: black;
+  animation-name: box-one-scale;
+}
+.box-two {
+  border-color: violet;
+
+  animation-name: box-two-scale;
+}
+.box-three {
+  border-color: orangered;
+
+  animation-name: box-three-scale;
+}
+.box-four {
+  border-color: purple;
+
+  animation-name: box-four-scale;
+}
+@keyframes box-one-scale {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(0.25);
+    transform: scale(0.25);
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(0.25);
+    transform: scale(0.25);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes box-two-scale {
+  0% {
+    -webkit-transform: scale(0.25);
+    transform: scale(0.25);
+  }
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.25);
+    transform: scale(0.25);
+  }
+  75% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.25);
+    transform: scale(0.25);
+  }
+}
+
+@keyframes box-three-scale {
+  0%,
+  25% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  75%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+
+@keyframes box-four-scale {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  25%,
+  75% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

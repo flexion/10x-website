@@ -4,56 +4,55 @@
   @include at-media("desktop") {
     background-color: transparent;
   }
-  &__primary a {
-    @include u-color("white");
-    &:hover {
-      @include u-color("primary-lighter");
-    }
-  }
-  &__primary-item {
-    border: none;
-  }
-
-  &__url {
-    position: relative;
-    @include u-font("sans", "xl");
-    @include u-color("white");
-    font-weight: 300 !important;
-    &:hover {
-      @include u-color("primary-lighter");
-      background-color: transparent !important;
-    }
-    @include at-media("desktop") {
-      @include u-font("sans", "md");
-      @include u-color("primary-darker");
-      &:after {
-        display: block;
-        content: "";
-        position: absolute;
-        height: 0.05em !important;
-        bottom: 0.5em !important;
-        left: 1rem;
-        right: 1rem;
-        @include u-bg("primary-darker");
-      }
-      &:hover {
-        @include u-color("primary-darker");
-        &:after {
-          height: 0.1em !important;
+  .usa-nav__primary {
+    > .usa-nav__primary-item {
+      border: none;
+      > .usa-nav__url {
+        position: relative;
+        @include u-font("sans", "2xl");
+        @include u-color("white");
+        font-weight: 100;
+        &:hover {
+          @include u-color("base-lighter");
+          background-color: transparent;
         }
-      }
-    }
 
-    &.usa-current {
-      @include u-color("white");
-      font-weight: 900 !important;
-      &:hover {
-        @include u-color("primary-lighter");
-        background-color: transparent !important;
-      }
+        &.usa-current {
+          @include u-color("white");
+          font-weight: 700;
+          &:hover {
+            @include u-color("primary-lighter");
+            background-color: transparent;
+          }
+        }
 
-      @include at-media("desktop") {
-        font-weight: 300 !important;
+        @include at-media("desktop") {
+          @include u-font("sans", "md");
+          @include u-color("base-darker");
+          &:after {
+            display: block;
+            content: "";
+            position: absolute;
+            height: 0.05em;
+            bottom: 0.5em;
+            left: 1rem;
+            right: 1rem;
+            @include u-bg("base-darker");
+          }
+          &:hover {
+            @include u-color("base-darker");
+            &:after {
+              height: 0.1em;
+            }
+          }
+          &.usa-current {
+            @include u-color("base-darker");
+            font-weight: 600;
+            &:hover {
+              @include u-color("base-darker");
+            }
+          }
+        }
       }
     }
   }

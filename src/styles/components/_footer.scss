@@ -15,9 +15,19 @@
   }
   a {
     @include u-text("white");
+    position: relative;
+    text-decoration-thickness: 1px;
+    &:hover {
+      @include u-color("white");
+      text-decoration-thickness: 2px;
+    }
+
     &.uswds-stamp {
       @include u-text("primary-lighter");
       font-weight: 600;
+      &:after {
+        display: none;
+      }
     }
 
     font-weight: 200;
@@ -26,7 +36,7 @@
 
 .uswds-stamp {
   display: inline-block;
-  padding: 1px 2px;
+  padding: 3px 2px 0px;
   @include u-margin-top(1);
   line-height: 1;
   @include u-border(2px);
