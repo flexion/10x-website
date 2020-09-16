@@ -1,11 +1,11 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 import Loading from "components/Loading";
 
 describe("<Loading />", () => {
   describe("default render", () => {
     it("should render", () => {
-      const wrapper = shallow(
+      const wrapper = mount(
         <Loading isLoading={true}>
           <span className="test" />
         </Loading>
@@ -14,7 +14,7 @@ describe("<Loading />", () => {
     });
 
     it("should render children", () => {
-      const wrapper = shallow(
+      const wrapper = mount(
         <Loading isLoading={false}>
           <span className="test" />
         </Loading>
@@ -23,7 +23,7 @@ describe("<Loading />", () => {
     });
 
     it("should render message", () => {
-      const wrapper = shallow(
+      const wrapper = mount(
         <Loading isLoading={true} message={<span className="test" />} />
       );
       expect(wrapper.find(".test")).toBeTruthy();

@@ -31,6 +31,7 @@ const Banner = () => {
                 aria-expanded="false"
                 aria-controls="gov-banner"
                 variant="outline"
+                id="gov-banner-button"
               >
                 Here’s how you know
               </Button>

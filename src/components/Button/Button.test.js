@@ -1,17 +1,17 @@
 import React from "react";
-import { shallow, render } from "enzyme";
+import { mount, render } from "enzyme";
 import Button from "components/Button";
 import Provider from "test/TestProvider";
 
 describe("<Button />", () => {
   describe("default render", () => {
     it("should render", () => {
-      const wrapper = shallow(
+      const wrapper = mount(
         <Provider>
           <Button url="http://google.com">Test</Button>
         </Provider>
       );
-      expect(wrapper.find(".usa-button")).toBeTruthy();
+      expect(wrapper.find(".usa-button").length).toBeTruthy();
     });
   });
 

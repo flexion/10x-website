@@ -1,11 +1,11 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 import { Grid, Row, Col } from "components/Grid";
 
 describe("<Grid />", () => {
   describe("default render", () => {
     it("should render", () => {
-      const wrapper = shallow(
+      const wrapper = mount(
         <Grid>
           <span className="test" />
         </Grid>
@@ -19,7 +19,7 @@ describe("<Grid />", () => {
 describe("<Row />", () => {
   describe("default render", () => {
     it("should render", () => {
-      const wrapper = shallow(
+      const wrapper = mount(
         <Row>
           <span className="test" />
         </Row>
@@ -33,7 +33,7 @@ describe("<Row />", () => {
 describe("<Col />", () => {
   describe("default render", () => {
     it("should render", () => {
-      const wrapper = shallow(
+      const wrapper = mount(
         <Col>
           <span className="test" />
         </Col>

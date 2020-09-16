@@ -2,6 +2,7 @@ import React from "react";
 import { mount } from "enzyme";
 import PrimaryNav from "components/PrimaryNav";
 import TestProvider from "test/TestProvider";
+import resizeWindow from "test/utils/resizeWindow";
 
 const items1 = [
   {
@@ -52,6 +53,31 @@ describe("<PrimaryNav />", () => {
         </TestProvider>
       );
       expect(wrapper.find(".usa-nav__submenu-item").length).toBe(2);
+    });
+  });
+
+  describe("mobile menu", () => {
+    beforeEach(() => {
+      resizeWindow(400, 800);
+    });
+    it("should render", () => {
+      const wrapper = mount(
+        <TestProvider>
+          <PrimaryNav items={items1} />
+        </TestProvider>
+      );
+      expect(wrapper.find("button#usa-nav-open").length).toBe(1);
+    });
+    it("should open menu", () => {
+      const wrapper = mount(
+        <TestProvider>
+          <PrimaryNav items={items1} />
+        </TestProvider>
+      );
+      const button = wrapper.find("button#usa-nav-open");
+      button.simulate("click");
+      wrapper.update();
+      expect(wrapper.find("button#usa-nav-close").length).toBe(1);
     });
   });
 });

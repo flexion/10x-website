@@ -1,12 +1,17 @@
 import React from "react";
-import { shallow } from "enzyme";
-import Default from "routes/Default";
+import { mount } from "enzyme";
+import FourOhFour from "routes/FourOhFour";
+import TestProvider from "test/TestProvider";
 
-describe("<Default />", () => {
+describe("<FourOhFour />", () => {
   describe("default render", () => {
     it("should render", () => {
-      const wrapper = shallow(<Default />);
-      expect(wrapper.find(".App-header")).toBeTruthy();
+      const wrapper = mount(
+        <TestProvider>
+          <FourOhFour />
+        </TestProvider>
+      );
+      expect(wrapper.find("h1").text()).toBe("404");
     });
   });
 });

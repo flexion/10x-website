@@ -49,7 +49,12 @@ const Nav = ({ items }) => {
   };
   return (
     <>
-      <Button type="button" onClick={handleClick} className="usa-nav-open">
+      <Button
+        type="button"
+        id="usa-nav-open"
+        onClick={handleClick}
+        className="usa-nav-open"
+      >
         Menu
       </Button>
       <nav
@@ -58,7 +63,12 @@ const Nav = ({ items }) => {
         className={classnames({ "usa-nav": true, "is-visible": isOpen })}
       >
         <div className="usa-nav__inner">
-          <Button type="button" className="usa-nav-close" onClick={handleClick}>
+          <Button
+            id="usa-nav-close"
+            type="button"
+            className="usa-nav-close"
+            onClick={handleClick}
+          >
             <img src={close} alt="close" />
           </Button>
           <ul className="usa-accordion usa-nav__primary">
