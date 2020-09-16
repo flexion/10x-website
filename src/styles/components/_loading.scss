@@ -1,42 +1,46 @@
 .Loading {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  position: relative;
-}
-.box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: 8px solid white;
-  animation-timing-function: ease;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-duration: 5s;
-}
-.box-one {
-  border-color: black;
-  animation-name: box-one-scale;
-}
-.box-two {
-  border-color: violet;
+  text-align: center;
+  &_box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    .box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: 8px solid;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      animation-fill-mode: none;
+      animation-duration: 5s;
+    }
+    .box-one {
+      @include u-border-color("accent-warm-light");
+      animation-name: box-one-scale;
+    }
+    .box-two {
+      @include u-border-color("accent-cool");
 
-  animation-name: box-two-scale;
-}
-.box-three {
-  border-color: orangered;
+      animation-name: box-two-scale;
+    }
+    .box-three {
+      @include u-border-color("accent-warm");
 
-  animation-name: box-three-scale;
-}
-.box-four {
-  border-color: purple;
+      animation-name: box-three-scale;
+    }
+    .box-four {
+      @include u-border-color("accent-cool-darker");
 
-  animation-name: box-four-scale;
+      animation-name: box-four-scale;
+    }
+  }
 }
+
 @keyframes box-one-scale {
   0% {
     -webkit-transform: scale(1);
@@ -47,8 +51,8 @@
     transform: scale(0.25);
   }
   50% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
   }
   75% {
     -webkit-transform: scale(0.25);
@@ -86,8 +90,8 @@
 @keyframes box-three-scale {
   0%,
   25% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
+    -webkit-transform: scale(0.125);
+    transform: scale(0.125);
   }
   50% {
     -webkit-transform: scale(1);
@@ -95,23 +99,23 @@
   }
   75%,
   100% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
+    -webkit-transform: scale(0.125);
+    transform: scale(0.125);
   }
 }
 
 @keyframes box-four-scale {
   0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
   }
   25%,
   75% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
   }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
   }
 }
