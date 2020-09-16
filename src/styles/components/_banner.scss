@@ -6,15 +6,12 @@
     @include u-font("sans", "2xs");
     @include u-padding-y(1);
     font-weight: 300;
-
-    line-height: 0;
-    &-flag {
-      float: none;
-    }
+    line-height: 1;
   }
   &__content {
     @include u-text("white");
     @include u-font("sans", "md");
+    @include u-padding(2);
     display: none;
     font-weight: 300;
     &.is-visible {
@@ -35,11 +32,11 @@
       @include u-text("base-lighter");
       @include u-font("sans", "2xs");
       @include u-padding(1);
-      box-shadow: none;
-
-      border: 1px solid;
       @include u-border-color("base-lighter");
+      text-align: center;
       line-height: 1;
+      box-shadow: none;
+      border: 1px solid;
 
       @include u-radius(2px);
       &:hover,
