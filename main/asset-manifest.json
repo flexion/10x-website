@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/10x-website/main/static/css/main.8ddb950b.chunk.css",
-    "main.js": "/10x-website/main/static/js/main.c38af6d6.chunk.js",
-    "main.js.map": "/10x-website/main/static/js/main.c38af6d6.chunk.js.map",
+    "main.css": "/10x-website/main/static/css/main.d74f3674.chunk.css",
+    "main.js": "/10x-website/main/static/js/main.5479d8d4.chunk.js",
+    "main.js.map": "/10x-website/main/static/js/main.5479d8d4.chunk.js.map",
     "runtime-main.js": "/10x-website/main/static/js/runtime-main.caf37c39.js",
     "runtime-main.js.map": "/10x-website/main/static/js/runtime-main.caf37c39.js.map",
-    "static/js/2.2babfc28.chunk.js": "/10x-website/main/static/js/2.2babfc28.chunk.js",
-    "static/js/2.2babfc28.chunk.js.map": "/10x-website/main/static/js/2.2babfc28.chunk.js.map",
+    "static/js/2.9d767e92.chunk.js": "/10x-website/main/static/js/2.9d767e92.chunk.js",
+    "static/js/2.9d767e92.chunk.js.map": "/10x-website/main/static/js/2.9d767e92.chunk.js.map",
     "index.html": "/10x-website/main/index.html",
-    "precache-manifest.b444ff82aa442f80773c50af5088b0ca.js": "/10x-website/main/precache-manifest.b444ff82aa442f80773c50af5088b0ca.js",
+    "precache-manifest.8f31b8284650fb04308c6d2381b0e4b9.js": "/10x-website/main/precache-manifest.8f31b8284650fb04308c6d2381b0e4b9.js",
     "service-worker.js": "/10x-website/main/service-worker.js",
-    "static/css/main.8ddb950b.chunk.css.map": "/10x-website/main/static/css/main.8ddb950b.chunk.css.map",
-    "static/js/2.2babfc28.chunk.js.LICENSE.txt": "/10x-website/main/static/js/2.2babfc28.chunk.js.LICENSE.txt",
+    "static/css/main.d74f3674.chunk.css.map": "/10x-website/main/static/css/main.d74f3674.chunk.css.map",
+    "static/js/2.9d767e92.chunk.js.LICENSE.txt": "/10x-website/main/static/js/2.9d767e92.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/10x-website/main/static/media/youtube15.9d356b3b.svg",
-    "static/media/logo.svg": "/10x-website/main/static/media/logo.5047b988.svg"
+    "static/media/close.svg": "/10x-website/main/static/media/close.8f292b6b.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.caf37c39.js",
-    "static/js/2.2babfc28.chunk.js",
-    "static/css/main.8ddb950b.chunk.css",
-    "static/js/main.c38af6d6.chunk.js"
+    "static/js/2.9d767e92.chunk.js",
+    "static/css/main.d74f3674.chunk.css",
+    "static/js/main.5479d8d4.chunk.js"
   ]
 }
