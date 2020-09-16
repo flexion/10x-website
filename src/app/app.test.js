@@ -1,8 +1,11 @@
 import app from "./index.js";
 import { initialState as content } from "app/ContentModule";
 
+import { initialState as menu } from "app/MenuModule";
+
 const combinedState = {
   content,
+  menu,
 };
 
 describe("app", () => {

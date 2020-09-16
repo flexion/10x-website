@@ -55,6 +55,8 @@ const verifyConfigPath = (cPath) => {
   if (!fs.existsSync(cPath)) {
     console.log(`${cPath} not found! Creating directory...`);
     fs.mkdirSync(cPath);
+  } else {
+    console.log(`${cPath} exists! HOORAY!`);
   }
 };
 
@@ -188,14 +190,17 @@ const indexMenus = () => {
       .filter(
         (filename) => filename.includes(".json") && filename !== "index.json"
       );
-
+    console.log(`${contents.length} menus found!`);
     const menuIndex = contents.map((filename) => {
       const file = fs.readFileSync(path.join(menuPath, filename), "utf-8");
+      if (file) {
+        console.log(`Loaded contents from ${filename}`);
+      }
       return JSON.parse(file);
     });
 
     if (menuIndex.length) {
-      writeFile(menuIndex, menuPath);
+      writeFile(menuIndex, `${menuPath}/index.json`);
     }
   });
 };

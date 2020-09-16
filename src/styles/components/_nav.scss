@@ -7,6 +7,11 @@
   .usa-nav__primary {
     > .usa-nav__primary-item {
       border: none;
+      &:first-child {
+        @include at-media("desktop") {
+          display: none !important;
+        }
+      }
       > .usa-nav__url {
         position: relative;
         @include u-font("sans", "2xl");

@@ -20,6 +20,9 @@ export const getContentTypeByName = async (props) => {
   if (!props.name) {
     throw new Error("Invalid Name.");
   }
+  if (props.name === "error") {
+    throw new Error("Invalid Name.");
+  }
   return testData[0];
 };
 

@@ -17,7 +17,7 @@ const Banner = () => {
         <header className="usa-banner__header">
           <div className="grid-row padding-x-2 align-items-center">
             <div className="grid-col-7 tablet:grid-col-9 padding-y-1">
-              <div style={{ display: "flex", alignItems: "center" }}>
+              <div className="usa-banner__header-text">
                 <img
                   className="usa-banner__header-flag"
                   src={flag}

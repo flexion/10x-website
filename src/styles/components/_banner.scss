@@ -7,6 +7,10 @@
     @include u-padding-y(1);
     font-weight: 300;
     line-height: 1;
+    &-text {
+      display: "flex";
+      align-items: "center";
+    }
   }
   &__content {
     @include u-text("white");
