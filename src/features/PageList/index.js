@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
 import { getList } from "app/ContentModule";
+import Loading from "components/Loading";
 
 const PageList = ({ type = "page" }) => {
   const dispatch = useDispatch();
@@ -11,7 +12,11 @@ const PageList = ({ type = "page" }) => {
   }, [dispatch, type]);
   const { pending, data, error } = list;
   if (pending) {
-    return <h1>Pending...</h1>;
+    return (
+      <Loading isLoading={pending}>
+        <span />
+      </Loading>
+    );
   }
   if (error) {
     return <h1 className="PageList__error">{error.message}</h1>;
@@ -19,15 +24,11 @@ const PageList = ({ type = "page" }) => {
   if (!data.length) {
     return <h1>No content found.</h1>;
   }
-  return (
-    <div>
-      {data.map((item, i) => (
-        <h1 className="PageList__item" key={`PageList-${i}`}>
-          {item.title}
-        </h1>
-      ))}
-    </div>
-  );
+  return data.map((item, i) => (
+    <h1 className="PageList__item" key={`PageList-${i}`}>
+      {item.title}
+    </h1>
+  ));
 };
 
 PageList.propTypes = {

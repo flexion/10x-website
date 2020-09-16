@@ -1,0 +1,5 @@
+.usa-header {
+  @include at-media("desktop") {
+    @include u-margin-top(2);
+  }
+}

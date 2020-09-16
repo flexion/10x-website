@@ -1,13 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-export const Loading = ({ isLoading, message, children }) => {
+export const Loading = ({ isLoading, children }) => {
   if (isLoading) {
     return (
-      <h1>
-        <FontAwesomeIcon icon="spinner" spin /> {message}
-      </h1>
+      <div className="Loading">
+        <div className="Loading_box">
+          <div className="box box-one" />
+          <div className="box box-two" />
+          <div className="box box-three" />
+          <div className="box box-four" />
+        </div>
+      </div>
     );
   }
   return children;

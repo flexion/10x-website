@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import { Grid, Row, Col } from "components/Grid";
 import PageList from "features/PageList";
 
@@ -7,15 +6,11 @@ const Default = () => {
   return (
     <Grid>
       <Row>
-        <Col size={12} className="text-center padding-y-6">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-          </header>
-        </Col>
-      </Row>
-      <Row>
         <Col size={12}>
-          <PageList />
+          <div style={{ paddingTop: "5vh", minHeight: "50vh" }}>
+            <h1>Fund your idea</h1>
+            <PageList />
+          </div>
         </Col>
       </Row>
     </Grid>
