@@ -10,7 +10,6 @@ const Page = () => {
   const params = useParams();
   const { name } = params;
   const page = useSelector((state) => state.content.page);
-  console.log(page);
   useEffect(() => {
     dispatch(getPage({ name }));
   }, [dispatch, name]);

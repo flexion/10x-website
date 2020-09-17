@@ -19,8 +19,9 @@ const LocationMenu = ({ key }) => {
     <div className="LocationMenu">
       <Grid>
         <Row gap={2} className="align-items-stretch">
-          {items.map((item) => (
+          {items.map((item, i) => (
             <Col
+              key={`${key}-${i}`}
               size="6"
               tablet="auto"
               desktop="auto"
