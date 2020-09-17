@@ -4,13 +4,17 @@ import Button from "components/Button";
 import Card from "components/Card";
 import Date from "components/Date";
 import { Grid, Row, Col } from "components/Grid";
+import Image from "components/Image";
 import Select from "components/Select";
+import LocationMenu from "features/LocationMenu";
 
 export const shortcodes = {
   Button,
   Card,
   Date,
   Grid,
+  Image,
+  LocationMenu,
   Row,
   Col,
   Select,

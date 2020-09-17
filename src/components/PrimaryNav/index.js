@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import close from "./close.svg";
 import Button from "components/Button";
 
@@ -33,6 +33,7 @@ const NavItem = ({ id, text, url, items = [] }) => {
         <NavLink
           className="usa-nav__url"
           activeClassName="usa-current"
+          exact
           to={url}
         >
           <span>{text}</span>
@@ -47,6 +48,10 @@ const Nav = ({ items }) => {
   const handleClick = () => {
     setOpen((state) => !state);
   };
+  const { pathname } = useLocation();
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
   return (
     <>
       <Button
@@ -72,13 +77,13 @@ const Nav = ({ items }) => {
             <img src={close} alt="close" />
           </Button>
           <ul className="usa-accordion usa-nav__primary">
-            {items.map(({ text, url, items }, idx) => {
+            {items.map(({ text, link, items }, idx) => {
               return (
                 <NavItem
                   key={`usa-nav-item-${idx}`}
                   id={idx}
                   text={text}
-                  url={url}
+                  url={link}
                   items={items}
                 />
               );
@@ -89,7 +94,6 @@ const Nav = ({ items }) => {
     </>
   );
 };
-
 Nav.defaultProps = {
   items: [],
 };

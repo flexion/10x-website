@@ -1,11 +1,10 @@
 backend:
   name: github
-  repo: flexion/10x-website
-  branch: content
+  repo: 10xWebsite/10x-content
+  branch: main
 
-media_folder: public/images
-public_folder: /images
-publish_mode: editorial_workflow
+media_folder: images
+public_folder: images
 
 collections:
   - name: settings
@@ -13,7 +12,7 @@ collections:
     publish: false
     label: Site Settings
     label_singular: Site Settings
-    folder: public/settings
+    folder: settings
     create: false
     delete: false
     preview_path: "{{slug}}"
@@ -50,7 +49,7 @@ collections:
     extension: json
     label: Menus
     label_singular: Menu
-    folder: public/settings/menu
+    folder: menus
     create: true
     delete: true
     editor:
@@ -69,6 +68,12 @@ collections:
           - label: Link
             name: link
             widget: string
+          - label: desc
+            name: Description
+            width: string
+          - label: img
+            name: img
+            widget: image
           - label: Items
             name: items
             widget: list
@@ -83,12 +88,10 @@ collections:
     extension: json
     label: Pages
     label_singular: Page
-    folder: public/content/page
+    folder: content/page
     create: true
     delete: true
     preview_path: "{{slug}}"
-    editor:
-      preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }

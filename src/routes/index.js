@@ -7,7 +7,7 @@ import Page from "./Page";
 export default ({ location }) => (
   <Switch location={location}>
     <Route key="default" path="/" component={Default} exact />
-    <Route key="page" path="/:name" compoent={Page} exact />
+    <Route key="page" path="/:name" component={Page} />
     <Route key="404" path="/" component={FourOhFour} />
   </Switch>
 );

@@ -3,17 +3,19 @@ import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { Col, Grid, Row } from "components/Grid";
+import Image from "components/Image";
 
-const LocationMenu = ({ key }) => {
+const LocationMenu = ({ name }) => {
   const { pathname } = useLocation();
+  const simplePath = pathname.replace("/", "");
   const menus = useSelector((state) => state.menu.data);
-  const menu = menus.find((d) => d.key === key);
+  const menu = menus.find((d) => d.name === name);
 
   const items = Boolean(menu)
-    ? menu.items.filter((item) => item.url !== pathname)
+    ? menu.items.filter((item) => !simplePath.includes(item.link))
     : [];
   if (!menu) {
-    return <span className="display-none">{`Menu ${key} not found.`}</span>;
+    return <span className="display-none">{`Menu ${name} not found.`}</span>;
   }
   return (
     <div className="LocationMenu">
@@ -21,14 +23,14 @@ const LocationMenu = ({ key }) => {
         <Row gap={2} className="align-items-stretch">
           {items.map((item, i) => (
             <Col
-              key={`${key}-${i}`}
+              key={`${name}-${i}`}
               size="6"
               tablet="auto"
               desktop="auto"
               className="margin-bottom-2 tablet:margin-bottom-0"
             >
               <Link to={item.url} className="LocationMenu__item">
-                <img
+                <Image
                   src={item.img}
                   alt={`link to ${item.text}`}
                   className="LocationMenu__item-img"
@@ -46,10 +48,10 @@ const LocationMenu = ({ key }) => {
   );
 };
 LocationMenu.defaultProps = {
-  key: "primary",
+  name: "primary",
 };
 LocationMenu.propTypes = {
-  key: PropTypes.string,
+  name: PropTypes.string,
 };
 
 export default LocationMenu;
