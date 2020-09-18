@@ -15,19 +15,27 @@ const Page = ({ name }) => {
     dispatch(getPage({ name: pageName }));
   }, [dispatch, pageName]);
   const { pending, data, error } = page;
-  return (
-    <Loading isLoading={pending}>
-      {error !== null ? (
-        <Grid>
-          <h1 className="Page__error">
-            Error: There was an error loading this page.
-          </h1>
-        </Grid>
-      ) : (
-        <Mdx>{data.body}</Mdx>
-      )}
-    </Loading>
-  );
+  if (pending) {
+    return (
+      <Grid>
+        <div style={{ paddingTop: "15vh", paddingBottom: "15vh" }}>
+          <Loading isLoading={true}>
+            <span />
+          </Loading>
+        </div>
+      </Grid>
+    );
+  }
+  if (error) {
+    return (
+      <Grid className="padding-y-6">
+        <h1 className="Page__error">
+          Error: There was an error loading this page.
+        </h1>
+      </Grid>
+    );
+  }
+  return <Mdx>{data.body}</Mdx>;
 };
 
 export default Page;
