@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/10x-website/6-react-refactor/static/css/main.5cda6866.chunk.css",
-    "main.js": "/10x-website/6-react-refactor/static/js/main.6926727b.chunk.js",
-    "main.js.map": "/10x-website/6-react-refactor/static/js/main.6926727b.chunk.js.map",
+    "main.js": "/10x-website/6-react-refactor/static/js/main.b8ea63da.chunk.js",
+    "main.js.map": "/10x-website/6-react-refactor/static/js/main.b8ea63da.chunk.js.map",
     "runtime-main.js": "/10x-website/6-react-refactor/static/js/runtime-main.db5011c3.js",
     "runtime-main.js.map": "/10x-website/6-react-refactor/static/js/runtime-main.db5011c3.js.map",
     "static/js/2.c6999254.chunk.js": "/10x-website/6-react-refactor/static/js/2.c6999254.chunk.js",
     "static/js/2.c6999254.chunk.js.map": "/10x-website/6-react-refactor/static/js/2.c6999254.chunk.js.map",
     "index.html": "/10x-website/6-react-refactor/index.html",
-    "precache-manifest.1537d0a08b2a725ac21bab16297bd1db.js": "/10x-website/6-react-refactor/precache-manifest.1537d0a08b2a725ac21bab16297bd1db.js",
+    "precache-manifest.549fb82439d29e3cc421b69d71fbb487.js": "/10x-website/6-react-refactor/precache-manifest.549fb82439d29e3cc421b69d71fbb487.js",
     "service-worker.js": "/10x-website/6-react-refactor/service-worker.js",
     "static/css/main.5cda6866.chunk.css.map": "/10x-website/6-react-refactor/static/css/main.5cda6866.chunk.css.map",
     "static/js/2.c6999254.chunk.js.LICENSE.txt": "/10x-website/6-react-refactor/static/js/2.c6999254.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.db5011c3.js",
     "static/js/2.c6999254.chunk.js",
     "static/css/main.5cda6866.chunk.css",
-    "static/js/main.6926727b.chunk.js"
+    "static/js/main.b8ea63da.chunk.js"
   ]
 }
