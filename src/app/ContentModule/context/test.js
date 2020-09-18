@@ -1,6 +1,9 @@
 /* istanbul ignore file */
 
-const testData = [{ title: "test 1" }, { title: "test 2" }];
+const testData = [
+  { title: "test 1", body: "# test one" },
+  { title: "test 2", body: "# test two" },
+];
 
 const testTax = [
   { key: "testTax", title: "test tax", items: ["testtax1", "testtax2"] },
@@ -18,6 +21,9 @@ export const getContentTypeByName = async (props) => {
     throw new Error("Invalid Type.");
   }
   if (!props.name) {
+    throw new Error("Invalid Name.");
+  }
+  if (props.name === "error") {
     throw new Error("Invalid Name.");
   }
   return testData[0];

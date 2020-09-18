@@ -16,15 +16,17 @@ const Banner = () => {
       <div className="usa-accordion">
         <header className="usa-banner__header">
           <div className="grid-row padding-x-2 align-items-center">
-            <div className="grid-col-9 padding-y-1">
-              <img
-                className="usa-banner__header-flag"
-                src={flag}
-                alt="U.S. flag"
-              />
-              An official website of the United States government
+            <div className="grid-col-7 tablet:grid-col-9 padding-y-1">
+              <div className="usa-banner__header-text">
+                <img
+                  className="usa-banner__header-flag"
+                  src={flag}
+                  alt="U.S. flag"
+                />
+                <span>An official website of the United States government</span>
+              </div>
             </div>
-            <div className="grid-col-3 text-right">
+            <div className="grid-col-5 tablet:grid-col-3 text-right">
               <Button
                 className="usa-banner__button"
                 onClick={handleClick}

@@ -11,24 +11,22 @@ const PageList = ({ type = "page" }) => {
     dispatch(getList({ type }));
   }, [dispatch, type]);
   const { pending, data, error } = list;
-  if (pending) {
-    return (
-      <Loading isLoading={pending}>
-        <span />
-      </Loading>
-    );
-  }
-  if (error) {
-    return <h1 className="PageList__error">{error.message}</h1>;
-  }
-  if (!data.length) {
-    return <h1>No content found.</h1>;
-  }
-  return data.map((item, i) => (
-    <h1 className="PageList__item" key={`PageList-${i}`}>
-      {item.title}
-    </h1>
-  ));
+
+  return (
+    <Loading isLoading={pending}>
+      {error ? (
+        <h1 className="PageList__error">{error.message}</h1>
+      ) : !data.length ? (
+        <h1>No content found.</h1>
+      ) : (
+        data.map((item, i) => (
+          <h1 className="PageList__item" key={`PageList-${i}`}>
+            {item.title}
+          </h1>
+        ))
+      )}
+    </Loading>
+  );
 };
 
 PageList.propTypes = {

@@ -7,30 +7,30 @@ import resizeWindow from "test/utils/resizeWindow";
 const items1 = [
   {
     text: "test",
-    url: "/test",
+    link: "/test",
   },
   {
     text: "test2",
-    url: "/test2",
+    link: "/test2",
   },
   {
     text: "test3",
-    url: "/test3",
+    link: "/test3",
   },
 ];
 
 const items2 = [
   {
     text: "test1",
-    url: "/test1",
+    link: "/test1",
     items: [
       {
         text: "test-1-1",
-        url: "/test1/1",
+        link: "/test1/1",
       },
       {
         text: "test-1-2",
-        url: "/test1/2",
+        link: "/test1/2",
       },
     ],
   },

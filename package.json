@@ -34,13 +34,12 @@
     "uswds": "^2.8.1"
   },
   "scripts": {
-    "prebuild": "node prebuild.js",
-    "start": "npm run prebuild && react-scripts start",
-    "build": "npm run prebuild && react-scripts build",
-    "federalist:build": "PUBLIC_URL=$BASEURL react-script build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "test:coverage": "npm test -- --coverage --watchAll=false",
-    "federalist": "npm run prebuild && npm run federalist:build && npm run federalist:copy",
+    "federalist": "npm run federalist:build && npm run federalist:copy",
+    "federalist:build": "PUBLIC_URL=$BASEURL react-script build",
     "federalist:copy": "mkdir -p _site && rm -rf _site/* && cp -r build/* _site/"
   },
   "eslintConfig": {
