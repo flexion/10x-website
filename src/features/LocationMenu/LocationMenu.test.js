@@ -20,5 +20,15 @@ describe("<Menu />", () => {
       await runAsyncRender(wrapper);
       expect(wrapper.find("a").length).toBe(4);
     });
+
+    it("should render on another route", async () => {
+      const wrapper = mount(
+        <TestProvider store={store} route={["/about"]}>
+          <LocationMenu />
+        </TestProvider>
+      );
+      await runAsyncRender(wrapper);
+      expect(wrapper.find("a").length).toBe(4);
+    });
   });
 });

@@ -8,11 +8,14 @@ import Image from "components/Image";
 const LocationMenu = ({ name }) => {
   const { pathname } = useLocation();
   const simplePath = pathname.replace("/", "");
+
   const menus = useSelector((state) => state.menu.data);
-  const menu = menus.find((d) => d.name === name);
+  const menu = menus.find((d) => d.key === name);
 
   const items = Boolean(menu)
-    ? menu.items.filter((item) => !simplePath.includes(item.link))
+    ? menu.items.filter((item) =>
+        !simplePath ? item.link !== "/" : !simplePath.includes(item.link)
+      )
     : [];
   if (!menu) {
     return <span className="display-none">{`Menu ${name} not found.`}</span>;
@@ -29,16 +32,14 @@ const LocationMenu = ({ name }) => {
               desktop="auto"
               className="margin-bottom-2 tablet:margin-bottom-0"
             >
-              <Link to={item.url} className="LocationMenu__item">
+              <Link to={item.link} className="LocationMenu__item">
                 <Image
                   src={item.img}
                   alt={`link to ${item.text}`}
                   className="LocationMenu__item-img"
                 />
                 <span className="LocationMenu__item-title">{item.text}</span>
-                <span className="LocationMenu__item-desc">
-                  {item.description}
-                </span>
+                <span className="LocationMenu__item-desc">{item.desc}</span>
               </Link>
             </Col>
           ))}

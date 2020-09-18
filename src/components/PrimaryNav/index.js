@@ -48,10 +48,10 @@ const Nav = ({ items }) => {
   const handleClick = () => {
     setOpen((state) => !state);
   };
-  const { pathname } = useLocation();
+  const location = useLocation();
   useEffect(() => {
     setOpen(false);
-  }, [pathname]);
+  }, [location]);
   return (
     <>
       <Button

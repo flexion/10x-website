@@ -2,7 +2,7 @@
 
 const testData = [
   {
-    name: "primary",
+    key: "primary",
     items: [
       { url: "/about", text: "About 10x" },
       { url: "/ideas", text: "Send us an idea" },

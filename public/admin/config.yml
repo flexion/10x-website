@@ -54,9 +54,10 @@ collections:
     delete: true
     editor:
       preview: false
+    slug: "{{key}}"
     fields:
-      - name: name
-        label: Name
+      - name: key
+        label: key
         widget: string
       - name: items
         label: Items
@@ -68,8 +69,8 @@ collections:
           - label: Link
             name: link
             widget: string
-          - label: desc
-            name: Description
+          - label: Description
+            name: desc
             width: string
           - label: img
             name: img

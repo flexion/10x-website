@@ -1,6 +1,9 @@
 /* istanbul ignore file */
 
-const testData = [{ title: "test 1" }, { title: "test 2" }];
+const testData = [
+  { title: "test 1", body: "# test one" },
+  { title: "test 2", body: "# test two" },
+];
 
 const testTax = [
   { key: "testTax", title: "test tax", items: ["testtax1", "testtax2"] },

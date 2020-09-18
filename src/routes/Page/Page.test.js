@@ -15,7 +15,7 @@ describe("Page", () => {
         </TestProvider>
       );
       await runAsyncRender(wrapper);
-      expect(wrapper.find(".Page__title").length).toBe(1);
+      expect(wrapper.find("h1").text()).toBe("test one");
     });
     it("should render error on incorrect path name", async () => {
       const wrapper = mount(

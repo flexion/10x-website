@@ -13,7 +13,7 @@ const Primary = ({ children }) => {
     dispatch(getMenuList({}));
   }, [dispatch]);
   const menus = useSelector((state) => state.menu.data);
-  const primary = menus.find(({ name }) => name === "primary");
+  const primary = menus.find(({ key }) => key === "primary");
   const navItems = primary ? primary.items : [];
   return (
     <div className="App">
