@@ -22,6 +22,7 @@ assignees: ''
 - [ ] Acceptance criteria is met
 
 ## UX
+- [ ] Content and design are reviewed to ensure they meet persona needs
 - [ ] Business test scenarios to meet all acceptance criteria are
 - [ ] Usability is validated on desktop and mobile devices
 - [ ] Wiki / documentation is updated (if applicable)
