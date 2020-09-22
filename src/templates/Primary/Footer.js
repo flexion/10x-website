@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Row, Col } from "components/Grid";
+import ColorBox from "components/ColorBox";
 
 const Footer = () => {
   return (
@@ -30,7 +31,7 @@ const Footer = () => {
             <a href="https://designsystem.digital.gov/" className="uswds-stamp">
               USWDS
             </a>
-
+            <ColorBox />
             <div className="BlockGraphic">
               <div>
                 <div>

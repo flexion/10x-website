@@ -1,6 +1,5 @@
 .TxContent {
   @include u-padding-top(4);
-  @include u-padding-bottom(10);
   @include u-font("sans", "lg");
   @include u-color("primary-light");
 
@@ -27,6 +26,17 @@
   h6 {
     @include u-color("ink");
   }
+  h1 {
+    @include u-margin(0);
+    @include u-font("sans", 17);
+    font-weight: 900;
+    letter-spacing: -2px;
+  }
+  h2 {
+    border-top: 4px solid;
+    @include u-border-color("ink");
+    @include u-padding-top(2);
+  }
 
   ul,
   ol {
@@ -51,7 +61,15 @@
       }
     }
   }
-
+  blockquote {
+    margin: 0;
+    padding: 0;
+    p {
+      margin: 0;
+      padding: 0;
+      @include u-font("sans", "xl");
+    }
+  }
   hr {
     height: 4px;
     @include u-margin-y(8);
@@ -79,6 +97,7 @@
     &:hover,
     &:focus {
       @include u-bg("accent-cool");
+      @include u-color("white");
       box-shadow: none;
 
       border: none;

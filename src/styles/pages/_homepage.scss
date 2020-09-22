@@ -28,12 +28,7 @@
     }
   }
   blockquote {
-    margin: 0;
-    padding: 0;
     p {
-      margin: 0;
-      padding: 0;
-      @include u-font("sans", "xl");
       @include u-color("accent-warm");
     }
   }
