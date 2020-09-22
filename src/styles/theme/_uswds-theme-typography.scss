@@ -219,7 +219,8 @@ $theme-font-cond-custom-stack: false;
 $theme-font-icon-custom-stack: false;
 $theme-font-lang-custom-stack: false;
 $theme-font-mono-custom-stack: false;
-$theme-font-sans-custom-stack: "United Sans Web", United Sans Web;
+$theme-font-sans-custom-stack: "United Sans Web", United Sans Web, -apple-system,
+  BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 $theme-font-serif-custom-stack: false;
 
 /*

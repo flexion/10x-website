@@ -35,7 +35,11 @@ const Page = ({ name }) => {
       </Grid>
     );
   }
-  return <Mdx>{data.body}</Mdx>;
+  return (
+    <div className={`TxContent Tx__${pageName}`}>
+      <Mdx>{data.body}</Mdx>
+    </div>
+  );
 };
 
 export default Page;

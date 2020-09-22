@@ -1,0 +1,87 @@
+.TxContent {
+  @include u-padding-top(4);
+  @include u-padding-bottom(10);
+  @include u-font("sans", "lg");
+  @include u-color("primary-light");
+
+  p {
+    @include u-margin-y(4);
+    line-height: 1.5 !important;
+  }
+
+  a {
+    @include u-color("ink");
+    @include u-underline("base-lightest");
+    &:hover {
+      @include u-color("ink");
+
+      @include u-underline("ink");
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include u-color("ink");
+  }
+
+  ul,
+  ol {
+    padding: 0;
+    margin: 0;
+    @include u-margin-bottom(4);
+    list-style: none;
+    li {
+      display: flex;
+      @include u-padding-y(1.5);
+      border-top: 1px solid;
+      @include u-border-color("base-lightest");
+      @include u-color("ink");
+      @media screen {
+        &:before {
+          display: inline-block;
+          @include u-margin-right(1);
+          font-family: "Font Awesome 5 Free";
+          content: "\f058";
+          font-weight: 900;
+        }
+      }
+    }
+  }
+
+  hr {
+    height: 4px;
+    @include u-margin-y(8);
+    @include u-bg("base-lightest");
+    border: none;
+    outline: none;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .usa-button {
+    border-radius: 2px;
+    @include u-padding-y(2);
+    @include u-padding-x(3);
+    @include u-font("sans", "lg");
+    font-weight: 700;
+    line-height: 1.4;
+    @include u-bg("accent-warm");
+    box-shadow: none;
+    border: none;
+    span {
+      @include u-font("sans", "md");
+      font-weight: 100;
+    }
+    &:hover,
+    &:focus {
+      @include u-bg("accent-cool");
+      box-shadow: none;
+
+      border: none;
+    }
+  }
+}

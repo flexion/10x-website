@@ -4,10 +4,10 @@ const testData = [
   {
     key: "primary",
     items: [
-      { url: "/about", text: "About 10x" },
-      { url: "/ideas", text: "Send us an idea" },
-      { url: "/process", text: "The 10x process" },
-      { url: "/projects", text: "The projects" },
+      { link: "/about", text: "About 10x" },
+      { link: "/ideas", text: "Send us an idea" },
+      { link: "/process", text: "The 10x process" },
+      { link: "/projects", text: "The projects" },
     ],
   },
 ];

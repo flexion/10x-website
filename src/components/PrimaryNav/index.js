@@ -24,7 +24,7 @@ const NavItem = ({ id, text, url, items = [] }) => {
           >
             {items.map((item, idx) => (
               <li key={idx} className="usa-nav__submenu-item">
-                <Link to={item.url}>{item.text}</Link>
+                <Link to={item.link}>{item.text}</Link>
               </li>
             ))}
           </ul>

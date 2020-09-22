@@ -2,15 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { far } from "@fortawesome/free-regular-svg-icons";
-import { fas } from "@fortawesome/free-solid-svg-icons";
 import Routes from "./routes";
 import store from "./app";
 import * as serviceWorker from "./serviceWorker";
 import Primary from "templates/Primary";
+import registerFontAwesome from "utils/registerFontAwesome";
 
-library.add(far, fas);
+registerFontAwesome();
 
 if (process.env.NODE_ENV !== "production") {
   const axe = require("react-axe");
