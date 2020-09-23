@@ -10,7 +10,7 @@
 
   a {
     @include u-color("ink");
-    @include u-underline("base-lightest");
+    @include u-underline("primary-lightest");
     &:hover {
       @include u-color("ink");
 
@@ -37,7 +37,6 @@
     @include u-border-color("ink");
     @include u-padding-top(2);
   }
-
   ul,
   ol {
     padding: 0;
@@ -48,16 +47,19 @@
       display: flex;
       @include u-padding-y(1.5);
       border-top: 1px solid;
-      @include u-border-color("base-lightest");
+      @include u-border-color("primary-lightest");
       @include u-color("ink");
-      @media screen {
-        &:before {
-          display: inline-block;
-          @include u-margin-right(1);
-          font-family: "Font Awesome 5 Free";
-          content: "\f058";
-          font-weight: 900;
-        }
+    }
+  }
+
+  ul {
+    li {
+      &:before {
+        display: inline-block;
+        @include u-margin-right(1);
+        font-family: "Font Awesome 5 Free";
+        content: "\f058";
+        font-weight: 900;
       }
     }
   }
@@ -73,7 +75,7 @@
   hr {
     height: 4px;
     @include u-margin-y(8);
-    @include u-bg("base-lightest");
+    @include u-bg("primary-lightest");
     border: none;
     outline: none;
     box-shadow: none;

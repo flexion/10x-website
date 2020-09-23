@@ -8,13 +8,6 @@ describe("<Card />", () => {
       const wrapper = mount(<Card title="Test" />);
       expect(wrapper.find(".usa-card")).toBeTruthy();
     });
-    it("should alert invalid variant", () => {
-      global.console = { warn: jest.fn(), error: jest.fn() };
-      const wrapper = mount(<Card title="Test" variant="test" />);
-      expect(wrapper.find(".usa-card")).toBeTruthy();
-      expect(console.warn).toBeCalled();
-      expect(console.error).toBeCalled();
-    });
   });
   describe("props", () => {
     it("should render with all props", async () => {
@@ -24,7 +17,7 @@ describe("<Card />", () => {
         imageAlt: "test",
         meta: "test",
         title: "test",
-        excerpt: "test",
+        children: "test",
         footer: "test",
         variant: "horizontal",
         flat: true,

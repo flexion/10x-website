@@ -25,7 +25,8 @@ Theme palette colors
 
 // Base colors
 $theme-color-base-family: "gray-cool";
-$theme-color-base-lightest: #c9c9c9;
+
+$theme-color-base-lightest: #f5f6f7;
 $theme-color-base-lighter: #919191;
 $theme-color-base-light: "gray-cool-30";
 $theme-color-base: "gray-cool-50";
@@ -36,7 +37,7 @@ $theme-color-base-ink: #171717;
 
 // Primary colors
 $theme-color-primary-family: #000000;
-$theme-color-primary-lightest: false;
+$theme-color-primary-lightest: #c9c9c9;
 $theme-color-primary-lighter: #757575;
 $theme-color-primary-light: #454545;
 $theme-color-primary: #2e2e2e;
@@ -70,11 +71,11 @@ $theme-color-accent-warm-darkest: false;
 $theme-color-accent-cool-family: "blue-cool";
 $theme-color-accent-cool-lightest: false;
 $theme-color-accent-cool-lighter: #c9c2f2;
-$theme-color-accent-cool-light: "blue-cool-20v";
+$theme-color-accent-cool-light: #b1a7eb;
 $theme-color-accent-cool: #7560eb;
 $theme-color-accent-cool-dark: "blue-cool-40v";
 $theme-color-accent-cool-darker: #433a7a;
-$theme-color-accent-cool-darkest: false;
+$theme-color-accent-cool-darkest: #29263b;
 
 /*
 ----------------------------------------

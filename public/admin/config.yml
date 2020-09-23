@@ -96,5 +96,10 @@ collections:
     preview_path: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Hero Content", name: "hero", widget: "markdown" }
+      - {
+          label: "Hero Content",
+          name: "hero",
+          widget: "markdown",
+          required: false,
+        }
       - { label: "Body", name: "body", widget: "markdown" }

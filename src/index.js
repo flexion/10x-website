@@ -7,6 +7,7 @@ import store from "./app";
 import * as serviceWorker from "./serviceWorker";
 import Primary from "templates/Primary";
 import registerFontAwesome from "utils/registerFontAwesome";
+import "styles/index.scss";
 
 registerFontAwesome();
 

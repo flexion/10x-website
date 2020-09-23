@@ -2,38 +2,37 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const validVar = (variant) => ["horizontal", "vertical"].includes(variant);
-
 const Card = ({
   className,
+  children,
   image,
   imageAlt,
   meta,
   title,
-  excerpt,
   footer,
-  variant: userVar,
+  variant,
   flat,
+  color,
 }) => {
-  let trueVar = "vertical";
-  if (validVar(userVar)) {
-    trueVar = userVar;
-  } else {
-    console.warn(`<Card /> : ${userVar} is not a valid variant.`);
-  }
-
   return (
     <div
       className={classnames({
         "usa-card": true,
-        "usa-card--flag": trueVar === "horizontal",
+        "usa-card--flag": variant === "horizontal",
         "usa-card--no-media": !image,
-        "usa-card--no-content": !title && !meta && !excerpt,
+        "usa-card--no-content": !title && !meta && !children,
         "usa-card--flat": flat,
         [className]: Boolean(className),
       })}
     >
-      <div className="usa-card__container">
+      <div
+        className={classnames({
+          "usa-card__container": true,
+          [`border-left-1 border-top-0 border-right-0 border-bottom-0 border-solid border-${color}`]: Boolean(
+            color
+          ),
+        })}
+      >
         {(title || meta) && (
           <header className="usa-card__header">
             <span className="usa-card__meta">{meta}</span>
@@ -52,7 +51,7 @@ const Card = ({
             </div>
           </div>
         )}
-        {excerpt && <div className="usa-card__body">{excerpt}</div>}
+        {children && <div className="usa-card__body">{children}</div>}
         {footer && <div className="usa-card__footer">{footer}</div>}
       </div>
     </div>
@@ -63,6 +62,7 @@ Card.defaultProps = {
   variant: "vertical",
   imageAlt: "",
 };
+
 Card.propTypes = {
   /** classname to be applied to component */
   className: PropTypes.string,
@@ -74,14 +74,14 @@ Card.propTypes = {
   meta: PropTypes.node,
   /** title text or node */
   title: PropTypes.node,
-  /** excerpt text or node */
-  excerpt: PropTypes.node,
   /** footer text or node */
   footer: PropTypes.node,
   /** render variant for card orientation */
   variant: PropTypes.oneOf(["vertical", "horizontal"]),
   /** boolean to display card shadow */
   flat: PropTypes.bool,
+  /** child node */
+  children: PropTypes.node,
 };
 
 export default Card;

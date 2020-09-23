@@ -5,6 +5,8 @@ import { getPage } from "app/ContentModule";
 import { Grid } from "components/Grid";
 import Loading from "components/Loading";
 import Mdx from "features/Mdx";
+import FourOhFour from "routes/FourOhFour";
+import { Helmet } from "react-helmet";
 
 const Page = ({ name }) => {
   const dispatch = useDispatch();
@@ -18,6 +20,7 @@ const Page = ({ name }) => {
   if (pending) {
     return (
       <Grid>
+        <Helmet title="Loading..." />
         <div style={{ paddingTop: "15vh", paddingBottom: "15vh" }}>
           <Loading isLoading={true}>
             <span />
@@ -27,16 +30,11 @@ const Page = ({ name }) => {
     );
   }
   if (error) {
-    return (
-      <Grid className="padding-y-6">
-        <h1 className="Page__error">
-          Error: There was an error loading this page.
-        </h1>
-      </Grid>
-    );
+    return <FourOhFour pathname={pageName} />;
   }
   return (
     <div className={`TxContent Tx__${pageName}`}>
+      <Helmet title={data.title} />
       <Mdx>{data.body}</Mdx>
     </div>
   );
