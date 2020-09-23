@@ -1,5 +1,7 @@
 import React from "react";
 import { Grid, Row, Col } from "components/Grid";
+import ColorBox from "components/ColorBox";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,7 +10,7 @@ const Footer = () => {
         <Row>
           <Col>
             <p>
-              10x <a href="/privacy-policy/">privacy policy</a>
+              10x <Link to="/privacy-policy/">privacy policy</Link>
             </p>
             <p>
               10x complies with the{" "}
@@ -30,14 +32,7 @@ const Footer = () => {
             <a href="https://designsystem.digital.gov/" className="uswds-stamp">
               USWDS
             </a>
-
-            <div className="BlockGraphic">
-              <div>
-                <div>
-                  <div></div>
-                </div>
-              </div>
-            </div>
+            <ColorBox variant="outline" />
           </Col>
         </Row>
       </Grid>

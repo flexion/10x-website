@@ -92,7 +92,14 @@ collections:
     folder: content/page
     create: true
     delete: true
+    slug: "{{title}}"
     preview_path: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Hero Content",
+          name: "hero",
+          widget: "markdown",
+          required: false,
+        }
       - { label: "Body", name: "body", widget: "markdown" }

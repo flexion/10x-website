@@ -28,4 +28,14 @@
       @include u-font("sans", "xs");
     }
   }
+  [class*="grid-col"] {
+    @include u-margin-bottom(2);
+    @include at-media("tablet") {
+      @include u-margin-bottom(0);
+    }
+
+    &:last-child {
+      @include u-margin-bottom(0);
+    }
+  }
 }

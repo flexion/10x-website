@@ -1,6 +1,6 @@
 .usa-header {
-  @include u-margin-bottom(2);
+  @include u-padding-bottom(2);
   @include at-media("desktop") {
-    @include u-margin-top(2);
+    @include u-padding-top(2);
   }
 }

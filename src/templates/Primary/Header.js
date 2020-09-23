@@ -1,12 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classnames from "classnames";
 import { Grid, Row, Col } from "components/Grid";
 import Banner from "components/Banner";
 import { Link } from "react-router-dom";
 
-const Header = ({ logo, nav }) => {
+const Header = ({ logo, nav, hero, className }) => {
   return (
-    <header className="usa-header usa-header--basic">
+    <header
+      className={classnames({
+        "usa-header": true,
+        "usa-header--basic": true,
+        [className]: className,
+      })}
+    >
       <Grid>
         <Row>
           <Col>
@@ -22,6 +29,7 @@ const Header = ({ logo, nav }) => {
           </Col>
         </Row>
       </Grid>
+      {hero}
     </header>
   );
 };
@@ -29,6 +37,7 @@ const Header = ({ logo, nav }) => {
 Header.propTypes = {
   logo: PropTypes.node,
   nav: PropTypes.node,
+  hero: PropTypes.node,
 };
 
 export default Header;
