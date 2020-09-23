@@ -1,14 +1,18 @@
 .TxContent {
-  @include u-padding-top(4);
+  @include u-padding-top(2);
   @include u-color("primary-light");
   @include u-font("sans", "sm");
   @include at-media("tablet") {
+    @include u-padding-top(4);
     @include u-font("sans", "lg");
   }
 
   p {
-    @include u-margin-y(4);
+    @include u-margin-y(2);
     line-height: 1.5 !important;
+    @include at-media("tablet") {
+      @include u-margin-y(4);
+    }
   }
 
   a {
@@ -16,7 +20,6 @@
     @include u-underline("primary-lightest");
     &:hover {
       @include u-color("ink");
-
       @include u-underline("ink");
     }
   }
@@ -43,6 +46,9 @@
     border-top: 4px solid;
     @include u-border-color("ink");
     @include u-padding-top(2);
+  }
+  h3 {
+    @include u-margin-bottom(1);
   }
   ul,
   ol {
