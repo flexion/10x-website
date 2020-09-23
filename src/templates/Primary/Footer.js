@@ -31,14 +31,7 @@ const Footer = () => {
             <a href="https://designsystem.digital.gov/" className="uswds-stamp">
               USWDS
             </a>
-            <ColorBox />
-            <div className="BlockGraphic">
-              <div>
-                <div>
-                  <div></div>
-                </div>
-              </div>
-            </div>
+            <ColorBox variant="outline" />
           </Col>
         </Row>
       </Grid>
