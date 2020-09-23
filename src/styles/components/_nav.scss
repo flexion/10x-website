@@ -29,6 +29,9 @@
             @include u-color("primary-lighter");
             background-color: transparent;
           }
+          &:after {
+            display: none;
+          }
         }
 
         @include at-media("desktop") {
@@ -55,6 +58,9 @@
             font-weight: 600;
             &:hover {
               @include u-color("base-darker");
+            }
+            &:after {
+              display: block;
             }
           }
         }
