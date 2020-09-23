@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/10x-website/6-react-refactor/static/css/main.d9ad85d8.chunk.css",
-    "main.js": "/10x-website/6-react-refactor/static/js/main.2c67f2cf.chunk.js",
-    "main.js.map": "/10x-website/6-react-refactor/static/js/main.2c67f2cf.chunk.js.map",
+    "main.css": "/10x-website/6-react-refactor/static/css/main.bc1fc3e8.chunk.css",
+    "main.js": "/10x-website/6-react-refactor/static/js/main.8887f2d2.chunk.js",
+    "main.js.map": "/10x-website/6-react-refactor/static/js/main.8887f2d2.chunk.js.map",
     "runtime-main.js": "/10x-website/6-react-refactor/static/js/runtime-main.db5011c3.js",
     "runtime-main.js.map": "/10x-website/6-react-refactor/static/js/runtime-main.db5011c3.js.map",
-    "static/js/2.7df20d28.chunk.js": "/10x-website/6-react-refactor/static/js/2.7df20d28.chunk.js",
-    "static/js/2.7df20d28.chunk.js.map": "/10x-website/6-react-refactor/static/js/2.7df20d28.chunk.js.map",
+    "static/js/2.6323af9b.chunk.js": "/10x-website/6-react-refactor/static/js/2.6323af9b.chunk.js",
+    "static/js/2.6323af9b.chunk.js.map": "/10x-website/6-react-refactor/static/js/2.6323af9b.chunk.js.map",
     "index.html": "/10x-website/6-react-refactor/index.html",
-    "precache-manifest.7c88ecf165233bae2a857b5eb11e81c6.js": "/10x-website/6-react-refactor/precache-manifest.7c88ecf165233bae2a857b5eb11e81c6.js",
+    "precache-manifest.5f8d5313bb26a0a2ec23947b82003b5d.js": "/10x-website/6-react-refactor/precache-manifest.5f8d5313bb26a0a2ec23947b82003b5d.js",
     "service-worker.js": "/10x-website/6-react-refactor/service-worker.js",
-    "static/css/main.d9ad85d8.chunk.css.map": "/10x-website/6-react-refactor/static/css/main.d9ad85d8.chunk.css.map",
-    "static/js/2.7df20d28.chunk.js.LICENSE.txt": "/10x-website/6-react-refactor/static/js/2.7df20d28.chunk.js.LICENSE.txt",
+    "static/css/main.bc1fc3e8.chunk.css.map": "/10x-website/6-react-refactor/static/css/main.bc1fc3e8.chunk.css.map",
+    "static/js/2.6323af9b.chunk.js.LICENSE.txt": "/10x-website/6-react-refactor/static/js/2.6323af9b.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/10x-website/6-react-refactor/static/media/youtube15.9d356b3b.svg",
     "static/media/close.svg": "/10x-website/6-react-refactor/static/media/close.8f292b6b.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.db5011c3.js",
-    "static/js/2.7df20d28.chunk.js",
-    "static/css/main.d9ad85d8.chunk.css",
-    "static/js/main.2c67f2cf.chunk.js"
+    "static/js/2.6323af9b.chunk.js",
+    "static/css/main.bc1fc3e8.chunk.css",
+    "static/js/main.8887f2d2.chunk.js"
   ]
 }
