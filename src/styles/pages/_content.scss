@@ -105,6 +105,7 @@
     @include u-font("sans", "md");
     font-weight: 700;
     line-height: 1.4;
+    @include u-color("white");
     @include u-bg("accent-warm");
     box-shadow: none;
     border: none;
