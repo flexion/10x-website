@@ -39,31 +39,3 @@
     }
   }
 }
-
-.BlockGraphic {
-  text-align: center;
-  @include u-margin-top(6);
-  @include u-padding-top(9);
-  @include u-border(2);
-  @include u-border-bottom(0);
-  @include u-border-color("primary-vivid");
-  @include u-bg("transparent");
-  & > div {
-    width: 40%;
-    @include u-margin-x("auto");
-    @include u-padding-top(6);
-    @include u-border(1);
-    @include u-border-bottom(0);
-    @include u-border-color("primary-light");
-    @include u-bg("transparent");
-    & > div {
-      width: 20%;
-      @include u-margin-x("auto");
-      @include u-padding-top(3);
-      @include u-border(0.5);
-      @include u-border-bottom(0);
-      @include u-border-color("primary-lighter");
-      @include u-bg("transparent");
-    }
-  }
-}
