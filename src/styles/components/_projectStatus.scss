@@ -1,0 +1,80 @@
+.ProjectStatus {
+  position: relative;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 4px;
+  width: 100%;
+  @include u-margin-top(4);
+  @include u-bg("base-lightest");
+
+  &:before {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    @include u-bg("ink");
+  }
+  &.phase-two {
+    &:before {
+      width: 33.5%;
+    }
+  }
+  &.phase-three {
+    &:before {
+      width: 66.5%;
+    }
+  }
+
+  &.phase-four {
+    &:before {
+      width: 100%;
+    }
+  }
+  &.graduated {
+    [class*="__icon"] {
+      border-width: 1px;
+      border-style: solid;
+      @include u-border("white");
+    }
+  }
+  &__item {
+    position: absolute;
+    margin-top: -16px;
+    width: 16px;
+    overflow: visible;
+    text-align: center;
+
+    &:first-child {
+      left: 0;
+      text-align: left;
+      [class*="__label"] {
+        width: max-content;
+      }
+    }
+    &:nth-child(2) {
+      left: 33.5%;
+    }
+    &:nth-child(3) {
+      right: 33.5%;
+    }
+    &:last-child {
+      right: 0;
+    }
+  }
+  &__label {
+    display: block;
+    @include u-font("sans", "3xs");
+    line-height: 0;
+  }
+  &__icon {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 0;
+
+    &.current {
+      @include u-bg("white");
+    }
+  }
+}
