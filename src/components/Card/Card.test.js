@@ -17,6 +17,7 @@ describe("<Card />", () => {
         imageAlt: "test",
         meta: "test",
         title: "test",
+        subtitle: "test",
         children: "test",
         footer: "test",
         variant: "horizontal",
