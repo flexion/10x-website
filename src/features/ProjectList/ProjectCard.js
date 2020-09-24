@@ -10,6 +10,7 @@ const ProjectCard = ({ data }) => {
       title={data.title}
       subtitle={data.subtitle}
       meta={`Type: ${data.projectType}`}
+      footer={<ProjectStatus data={data.phaseData} />}
     >
       <div className="ProjectCard__excerpt">{data.excerpt}</div>
       {data.topics && (
@@ -20,7 +21,6 @@ const ProjectCard = ({ data }) => {
           ))}
         </div>
       )}
-      <ProjectStatus data={data.phaseData} />
     </Card>
   );
 };

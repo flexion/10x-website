@@ -1,53 +1,59 @@
 .ProjectStatus {
-  position: relative;
-  align-items: stretch;
-  justify-content: space-between;
-  height: 4px;
-  width: 100%;
-  @include u-margin-top(4);
-  @include u-bg("base-lightest");
+  margin-top: 2px;
+  margin-bottom: 10px;
+  line-height: 1;
+  font-size: 16px;
+  &__bar {
+    position: relative;
+    align-items: stretch;
+    justify-content: space-between;
+    height: 4px;
+    width: 100%;
+    @include u-margin-top(32px);
+    @include u-bg("base-lightest");
 
-  &:before {
-    display: inline-block;
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    @include u-bg("ink");
-  }
-  &.phase-two {
     &:before {
-      width: 33.5%;
+      display: inline-block;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      @include u-bg("ink");
     }
-  }
-  &.phase-three {
-    &:before {
-      width: 66.5%;
+    &.phase-two {
+      &:before {
+        width: 33.5%;
+      }
     }
-  }
+    &.phase-three {
+      &:before {
+        width: 66.5%;
+      }
+    }
 
-  &.phase-four {
-    &:before {
-      width: 100%;
+    &.phase-four {
+      &:before {
+        width: 100%;
+      }
     }
-  }
-  &.graduated {
-    [class*="__icon"] {
-      border-width: 1px;
-      border-style: solid;
-      @include u-border("white");
+    &.graduated {
+      .current [class*="__icon"] {
+        border-width: 1px;
+        border-style: solid;
+        @include u-border("white");
+      }
     }
   }
   &__item {
     position: absolute;
-    margin-top: -16px;
+    margin-top: -22px;
     width: 16px;
     overflow: visible;
     text-align: center;
 
     &:first-child {
-      left: 0;
+      left: -2px;
       text-align: left;
       [class*="__label"] {
         width: max-content;
@@ -55,26 +61,35 @@
     }
     &:nth-child(2) {
       left: 33.5%;
+      transform: translateX(-4px);
     }
     &:nth-child(3) {
       right: 33.5%;
+      transform: translateX(4px);
     }
     &:last-child {
-      right: 0;
+      right: -2px;
+    }
+
+    &.current {
+      [class*="__icon"] {
+        @include u-bg("white");
+      }
+    }
+    &.inert {
+      [class*="__icon"] {
+        @include u-color("base-lightest");
+      }
     }
   }
   &__label {
     display: block;
     @include u-font("sans", "3xs");
-    line-height: 0;
+    line-height: 16px;
   }
   &__icon {
     display: inline-block;
     font-size: 16px;
     line-height: 0;
-
-    &.current {
-      @include u-bg("white");
-    }
   }
 }

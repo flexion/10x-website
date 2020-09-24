@@ -28,6 +28,9 @@
 
     @include u-font("sans", "sm");
   }
+  &__topics {
+    @include u-margin-bottom(2);
+  }
   &__topics-heading {
     display: block;
     @include u-color("accent-warm");
