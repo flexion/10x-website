@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 import Icon from "components/Icon";
 import classnames from "classnames";
 
-const PhaseItem = ({ isCurrent, isInert, data, label }) => {
+const PhaseItem = ({ data, phase, label }) => {
+  const isCurrent = phase === data.phase;
+  const isInert = phase > data.phase;
+
   return (
     <div
       class={classnames({
@@ -16,7 +19,17 @@ const PhaseItem = ({ isCurrent, isInert, data, label }) => {
       })}
     >
       <span className="ProjectStatus__label">{label}</span>
-      <span className="ProjectStatus__icon">
+      <span
+        className={classnames({
+          ProjectStatus__icon: true,
+          "c-one": phase === "1",
+          "c-two": phase === "2" && data.phase === "2",
+          "c-three-two": phase === "2" && data.phase === "3",
+          "c-four-two": phase === "2" && data.phase === "4",
+          "c-four-three": phase === "3" && data.phase === "4",
+          "c-four": phase === "4" && data.phase === "4",
+        })}
+      >
         <Icon
           icon={data.status === "3" && isCurrent ? "graduation-cap" : "circle"}
           variant={data.status === "1" && isCurrent ? "regular" : "solid"}
@@ -49,13 +62,16 @@ const ProjectStatus = ({ data }) => {
           graduated: data.status === "3",
         })}
       >
-        {Object.entries(phases).map(([phase, value]) => {
+        {Object.entries(phases).map(([key, value], i) => {
           return (
             <PhaseItem
-              isCurrent={phase === data.phase}
-              isInert={phase > data.phase}
+              key={`PhaseItem__item-${key}`}
+              className={classnames({})}
+              isCurrent={key === data.phase}
+              isInert={key > data.phase}
               label={value.label}
               data={data}
+              phase={key}
             />
           );
         })}
