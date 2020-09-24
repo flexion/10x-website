@@ -25,11 +25,14 @@
 
   &__excerpt {
     @include u-margin-y(2);
+
+    @include u-font("sans", "sm");
   }
   &__topics-heading {
     display: block;
     @include u-color("accent-warm");
     @include u-margin-y(1);
+    @include u-font("sans", "md");
   }
   &__tag {
     @include u-color("white");
