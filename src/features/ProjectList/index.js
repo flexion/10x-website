@@ -13,12 +13,14 @@ const ProjectCard = ({ data }) => {
       meta={`Type: ${data.projectType}`}
     >
       <div className="ProjectCard__excerpt">{data.excerpt}</div>
-      <div className="ProjectCard__topics">
-        <span className="ProjectCard__topics-heading">Topics & Audience</span>
-        {data.topics.split(",").map((item) => (
-          <span className="ProjectCard__tag">{item}</span>
-        ))}
-      </div>
+      {data.topics && (
+        <div className="ProjectCard__topics">
+          <span className="ProjectCard__topics-heading">Topics & Audience</span>
+          {data.topics.split(",").map((item) => (
+            <span className="ProjectCard__tag">{item}</span>
+          ))}
+        </div>
+      )}
     </Card>
   );
 };
