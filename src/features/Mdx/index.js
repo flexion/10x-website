@@ -9,7 +9,9 @@ import { Grid, Row, Col } from "components/Grid";
 import Icon from "components/Icon";
 import Image from "components/Image";
 import Select from "components/Select";
+import ContentList from "features/ContentList";
 import LocationMenu from "features/LocationMenu";
+import ProjectList from "features/ProjectList";
 
 export const shortcodes = {
   Button,
@@ -20,10 +22,12 @@ export const shortcodes = {
   Icon,
   Image,
   Link,
-  LocationMenu,
   Row,
   Col,
   Select,
+  ContentList,
+  LocationMenu,
+  ProjectList,
 };
 
 const Mdx = ({ children, scope }) => {

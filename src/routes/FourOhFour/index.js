@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Row, Col } from "components/Grid";
 import { Helmet } from "react-helmet";
+import ProjectList from "features/ProjectList";
 
 const FourOhFour = ({ pathname }) => {
   return (
@@ -14,6 +15,8 @@ const FourOhFour = ({ pathname }) => {
           >
             <h1>404</h1>
             <h2>The path "{pathname}" returned no results.</h2>
+
+            <ProjectList />
           </div>
         </Col>
       </Row>

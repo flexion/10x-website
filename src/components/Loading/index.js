@@ -1,9 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-export const Loading = ({ isLoading, children }) => {
+import classnames from "classnames";
+
+export const Loading = ({ isLoading, className, children }) => {
   if (isLoading) {
     return (
-      <div className="Loading">
+      <div
+        className={classnames({
+          Loading: true,
+          [className]: Boolean(className),
+        })}
+      >
         <div className="Loading_box">
           <div className="box box-one" />
           <div className="box box-two" />

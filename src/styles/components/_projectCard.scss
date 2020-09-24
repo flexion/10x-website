@@ -1,0 +1,41 @@
+.ProjectCard {
+  .usa-card {
+    &__container {
+      border-radius: 0;
+      @include u-bg("white");
+    }
+    &__header {
+      @include u-margin-bottom(2);
+    }
+    &__heading {
+      @include u-color("accent-warm");
+      @include u-font("sans", "lg");
+      @include u-margin-bottom(2);
+    }
+    &__subhead {
+      @include u-font("sans", "xl");
+    }
+    &__meta {
+      font-style: italic;
+    }
+  }
+
+  &__excerpt {
+    @include u-margin-y(2);
+  }
+  &__topics-heading {
+    display: block;
+    @include u-color("accent-warm");
+    @include u-margin-y(1);
+  }
+  &__tag {
+    @include u-color("white");
+    @include u-font("sans", "2xs");
+    @include u-padding(1);
+    @include u-margin-right(1);
+    @include u-margin-bottom(1);
+    @include u-bg("accent-cool-darker");
+    line-height: 1;
+    display: inline-block;
+  }
+}
