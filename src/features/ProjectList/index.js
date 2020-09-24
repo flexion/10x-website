@@ -2,12 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import ContentList from "features/ContentList";
 import Card from "components/Card";
-import { Row } from "components/Grid";
 
 const ProjectCard = ({ data }) => {
   return (
     <Card
-      className="ProjectCard tablet:grid-col-6"
+      className="ProjectCard"
       title={data.title}
       subtitle={data.subtitle}
       meta={`Type: ${data.projectType}`}
@@ -27,9 +26,9 @@ const ProjectCard = ({ data }) => {
 
 const ProjectList = ({ type }) => {
   return (
-    <Row className="flex-justify-center" gap="2">
+    <div className="ProjectList">
       <ContentList type={type} render={ProjectCard} />
-    </Row>
+    </div>
   );
 };
 

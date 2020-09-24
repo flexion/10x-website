@@ -1,4 +1,7 @@
 .ProjectCard {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
   .usa-card {
     &__container {
       border-radius: 0;
@@ -38,4 +41,10 @@
     line-height: 1;
     display: inline-block;
   }
+}
+
+.ProjectList {
+  column-count: 2;
+  width: 100%;
+  margin: 50px auto;
 }
