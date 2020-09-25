@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import classnames from "classnames";
-import flag from "uswds/dist/img/us_flag_small.png";
 import Button from "components/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -18,11 +17,7 @@ const Banner = () => {
           <div className="grid-row padding-x-2 align-items-center">
             <div className="grid-col-7 tablet:grid-col-9 padding-y-1">
               <div className="usa-banner__header-text">
-                <img
-                  className="usa-banner__header-flag"
-                  src={flag}
-                  alt="U.S. flag"
-                />
+                <span class="usa-banner__flag">:flag:</span>
                 <span>An official website of the United States government</span>
               </div>
             </div>

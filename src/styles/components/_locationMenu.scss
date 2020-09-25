@@ -1,5 +1,9 @@
 .LocationMenu {
-  @include u-padding-y(4);
+  @include u-padding-top(4);
+  @include u-padding-bottom(2);
+  @include at-media("tablet") {
+    @include u-padding-y(4);
+  }
   @include u-bg("black");
   &__item {
     display: inline-block;
@@ -31,10 +35,6 @@
   [class*="grid-col"] {
     @include u-margin-bottom(2);
     @include at-media("tablet") {
-      @include u-margin-bottom(0);
-    }
-
-    &:last-child {
       @include u-margin-bottom(0);
     }
   }

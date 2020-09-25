@@ -10,7 +10,7 @@ const Footer = () => {
         <Row>
           <Col>
             <p>
-              10x <Link to="/privacy-policy/">privacy policy</Link>
+              10x <Link to="/privacy-policy">privacy policy</Link>
             </p>
             <p>
               10x complies with the{" "}

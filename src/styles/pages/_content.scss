@@ -17,7 +17,7 @@
 
   a {
     @include u-color("ink");
-    @include u-underline("primary-lightest");
+    @include u-underline("base-lighter");
     &:hover {
       @include u-color("ink");
       @include u-underline("ink");

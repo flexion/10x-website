@@ -6,7 +6,10 @@ import { Link } from "react-router-dom";
 
 const ProjectCard = ({ data }) => {
   return (
-    <Link to={`/project/${data.name}`} className="ProjectCard__link">
+    <Link
+      to={data.projectLink || "/our-projects"}
+      className="ProjectCard__link"
+    >
       <Card
         className="ProjectCard"
         title={data.title}

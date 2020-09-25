@@ -29,8 +29,8 @@
       @include u-margin-top(1);
       line-height: 1;
       @include u-border(2px);
-      @include u-border-color("white");
-      @include u-text("white");
+      @include u-border-color("base-lighter");
+      @include u-text("base-lighter");
       text-decoration: none;
       font-weight: 600;
       &:after {
