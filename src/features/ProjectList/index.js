@@ -3,16 +3,12 @@ import PropTypes from "prop-types";
 import ContentList from "features/ContentList";
 import ProjectCard from "./ProjectCard";
 
-const ProjectList = ({ type }) => {
+const ProjectList = () => {
   return (
     <div className="ProjectList">
-      <ContentList type={type} render={ProjectCard} />
+      <ContentList type="project" render={ProjectCard} />
     </div>
   );
-};
-
-ProjectList.defaultProps = {
-  type: "project",
 };
 
 ProjectList.propTypes = {

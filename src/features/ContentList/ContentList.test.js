@@ -27,5 +27,19 @@ describe("ContentList", () => {
 
       expect(wrapper.find(".ContentList__error").length).toBe(1);
     });
+
+    it("should render custom Error component", async () => {
+      const wrapper = mount(
+        <TestProvider store={store}>
+          <ContentList
+            type="error"
+            error={() => <h1 id="TestError">Test Error</h1>}
+          />
+        </TestProvider>
+      );
+      await runAsyncRender(wrapper);
+
+      expect(wrapper.find("#TestError").length).toBe(1);
+    });
   });
 });
