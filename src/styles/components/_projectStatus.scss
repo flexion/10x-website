@@ -1,3 +1,10 @@
+$c-one: rgba(217, 63, 4, 1);
+$c-two: rgba(60, 61, 117, 1);
+$c-three-two: rgba(136, 61, 61, 1);
+$c-four-two: rgba(166, 62, 40, 1);
+$c-four-three: rgba(105, 60, 82, 1);
+$c-four: rgba(60, 61, 117, 1);
+
 .ProjectStatus {
   margin-top: 2px;
   margin-bottom: 10px;
@@ -9,7 +16,7 @@
     justify-content: space-between;
     height: 4px;
     width: 100%;
-    @include u-margin-top(32px);
+    @include u-margin-y(32px);
     @include u-bg("base-lightest");
 
     &:before {
@@ -19,11 +26,7 @@
       top: 0;
       left: 0;
       bottom: 0;
-      background: linear-gradient(
-        112deg,
-        rgba(217, 63, 4, 1) 0%,
-        rgba(60, 61, 117, 1) 100%
-      );
+      background: linear-gradient(112deg, #{$c-one} 0%, #{$c-four} 100%);
     }
 
     &.phase-two {
@@ -79,6 +82,7 @@
     &.current {
       [class*="__icon"] {
         @include u-bg("white");
+        border-radius: 100%;
       }
     }
     &.inert {
@@ -98,22 +102,27 @@
     line-height: 0;
   }
 
+  &__message {
+    @include u-font("sans", "3xs");
+    font-style: italic;
+  }
+
   .c-one {
-    color: rgba(217, 63, 4, 1);
+    color: $c-one;
   }
   .c-two {
-    color: rgba(60, 61, 117, 1);
+    color: $c-two;
   }
   .c-three-two {
-    color: rgba(136, 61, 61, 1);
+    color: $c-three-two;
   }
   .c-four-two {
-    color: rgba(166, 62, 40, 1);
+    color: $c-four-two;
   }
   .c-four-three {
-    color: rgba(105, 60, 82, 1);
+    color: $c-four-three;
   }
   .c-four {
-    color: rgba(60, 61, 117, 1);
+    color: $c-four;
   }
 }

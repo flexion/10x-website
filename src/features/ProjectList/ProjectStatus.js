@@ -39,20 +39,13 @@ const PhaseItem = ({ data, phase, label }) => {
   );
 };
 
-const phases = {
-  1: {
-    label: "Phase 1",
-    className: "phase-one",
-  },
-  2: {
-    label: "2",
-    className: "phase-two",
-  },
-  3: { label: "3", className: "phase-three" },
-  4: { label: "4", className: "phase-four" },
+PhaseItem.propTypes = {
+  data: PropTypes.object,
+  phase: PropTypes.string,
+  label: PropTypes.string,
 };
 
-const ProjectStatus = ({ data }) => {
+const ProjectStatus = ({ data, phases }) => {
   return (
     <div className="ProjectStatus">
       <div
@@ -62,7 +55,7 @@ const ProjectStatus = ({ data }) => {
           graduated: data.status === "3",
         })}
       >
-        {Object.entries(phases).map(([key, value], i) => {
+        {Object.entries(phases).map(([key, value]) => {
           return (
             <PhaseItem
               key={`PhaseItem__item-${key}`}
@@ -76,8 +69,25 @@ const ProjectStatus = ({ data }) => {
           );
         })}
       </div>
+      <div className="ProjectStatus__message">{data.message}</div>
     </div>
   );
+};
+
+ProjectStatus.defaultProps = {
+  data: {},
+  phases: {
+    1: {
+      label: "Phase 1",
+      className: "phase-one",
+    },
+    2: {
+      label: "2",
+      className: "phase-two",
+    },
+    3: { label: "3", className: "phase-three" },
+    4: { label: "4", className: "phase-four" },
+  },
 };
 
 ProjectStatus.propTypes = { data: PropTypes.object };
