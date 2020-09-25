@@ -6,7 +6,6 @@ import classnames from "classnames";
 const PhaseItem = ({ data, phase, label }) => {
   const isCurrent = phase === data.phase;
   const isInert = phase > data.phase;
-
   return (
     <div
       class={classnames({
@@ -25,6 +24,7 @@ const PhaseItem = ({ data, phase, label }) => {
           "c-one": phase === "1",
           "c-two": phase === "2" && data.phase === "2",
           "c-three-two": phase === "2" && data.phase === "3",
+          "c-three": phase === "3" && data.phase === "3",
           "c-four-two": phase === "2" && data.phase === "4",
           "c-four-three": phase === "3" && data.phase === "4",
           "c-four": phase === "4" && data.phase === "4",
@@ -59,7 +59,6 @@ const ProjectStatus = ({ data, phases }) => {
           return (
             <PhaseItem
               key={`PhaseItem__item-${key}`}
-              className={classnames({})}
               isCurrent={key === data.phase}
               isInert={key > data.phase}
               label={value.label}

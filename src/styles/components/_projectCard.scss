@@ -2,10 +2,32 @@
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
   break-inside: avoid;
+
+  &__link {
+    text-decoration: none;
+    &:hover {
+      .usa-card__container {
+        box-shadow: 0 0 0 6px #{color("accent-warm-dark")} inset;
+        cursor: pointer;
+      }
+    }
+    &:active:not(:focus) {
+      .usa-card__container {
+        box-shadow: 0 0 0 6px #{color("accent-cool")} inset;
+      }
+    }
+    &:focus {
+      .usa-card__container {
+        box-shadow: 0 0 0 6px #{color("accent-warm-lighter")} inset;
+      }
+    }
+  }
   .usa-card {
     &__container {
       border-radius: 0;
+      border: none;
       @include u-bg("white");
+      box-shadow: 0 0 0 2px #{color("base-light")} inset;
     }
     &__header {
       @include u-margin-bottom(2);
