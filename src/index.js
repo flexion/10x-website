@@ -10,10 +10,10 @@ import registerFontAwesome from "utils/registerFontAwesome";
 import "styles/index.scss";
 
 registerFontAwesome();
-const mainBranch = "/main";
+const mainBranch = "/10x-website";
 
 let Router = BrowserRouter;
-let basename = process.env.PUBLIC_URL.replace(mainBranch);
+let basename = process.env.PUBLIC_URL;
 
 if (process.env.NODE_ENV !== "production") {
   const axe = require("react-axe");
@@ -22,7 +22,6 @@ if (process.env.NODE_ENV !== "production") {
 
 if (!process.env.PUBLIC_URL.includes(mainBranch)) {
   Router = HashRouter;
-  basename = process.env.PUBLIC_URL;
 }
 
 ReactDOM.render(
