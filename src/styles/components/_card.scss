@@ -13,6 +13,10 @@
       @include u-font("sans", "lg");
     }
   }
+  &__subhead {
+    display: block;
+    line-height: 1.1;
+  }
   &__body {
     margin-top: 0;
     padding-top: 0;

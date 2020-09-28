@@ -25,7 +25,7 @@ const LocationMenu = ({ name }) => {
       <Grid>
         <Row gap={2} className="align-items-stretch">
           {items.map((item, i) => (
-            <Col key={`${name}-${i}`} size="12" tablet="auto" desktop="auto">
+            <Col key={`${name}-${i}`} size="12" tablet="6" desktop="auto">
               <Link to={item.link} className="LocationMenu__item">
                 <Image
                   src={item.img}

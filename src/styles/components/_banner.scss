@@ -8,9 +8,12 @@
     font-weight: 300;
     line-height: 1;
     &-text {
-      display: "flex";
-      align-items: "center";
+      display: flex !important;
+      align-items: stretch;
     }
+  }
+  &__flag {
+    @include u-margin-right(1);
   }
   &__content {
     @include u-text("white");

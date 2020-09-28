@@ -8,6 +8,7 @@ const Card = ({
   image,
   imageAlt,
   meta,
+  subtitle,
   title,
   footer,
   variant,
@@ -33,10 +34,11 @@ const Card = ({
           ),
         })}
       >
-        {(title || meta) && (
+        {(title || meta || subtitle) && (
           <header className="usa-card__header">
-            <span className="usa-card__meta">{meta}</span>
-            <h3 className="usa-card__heading">{title}</h3>
+            {title && <h3 className="usa-card__heading">{title}</h3>}
+            {subtitle && <span className="usa-card__subhead">{subtitle}</span>}
+            {meta && <span className="usa-card__meta">{meta}</span>}
           </header>
         )}
         {image && (
@@ -74,6 +76,8 @@ Card.propTypes = {
   meta: PropTypes.node,
   /** title text or node */
   title: PropTypes.node,
+  /** subtitle text or node */
+  subtitle: PropTypes.node,
   /** footer text or node */
   footer: PropTypes.node,
   /** render variant for card orientation */
