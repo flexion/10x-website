@@ -1,4 +1,4 @@
-name: GH Pages Branch UI Deploy
+name: GH Pages Main UI Deploy
 on:
   push:
     branches:
