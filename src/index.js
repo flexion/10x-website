@@ -21,7 +21,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 if (!process.env.PUBLIC_URL.includes(mainBranch)) {
-  Routes = HashRouter;
+  Router = HashRouter;
   basename = process.env.PUBLIC_URL;
 }
 
