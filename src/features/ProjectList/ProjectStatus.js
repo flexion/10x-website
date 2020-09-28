@@ -8,7 +8,7 @@ const PhaseItem = ({ data, phase, label }) => {
   const isInert = phase > data.phase;
   return (
     <div
-      class={classnames({
+      className={classnames({
         ProjectStatus__item: true,
         inert: isInert,
         current: isCurrent,

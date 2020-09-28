@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 import Routes from "./routes";
 import store from "./app";
 import * as serviceWorker from "./serviceWorker";
@@ -10,13 +10,21 @@ import registerFontAwesome from "utils/registerFontAwesome";
 import "styles/index.scss";
 
 registerFontAwesome();
+const mainBranch = "/main";
+
+let Router = BrowserRouter;
+let basename = process.env.PUBLIC_URL.replace(mainBranch);
 
 if (process.env.NODE_ENV !== "production") {
   const axe = require("react-axe");
   axe(React, ReactDOM, 1000);
 }
 
-const basename = process.env.PUBLIC_URL || "/";
+if (!process.env.PUBLIC_URL.includes(mainBranch)) {
+  Routes = HashRouter;
+  basename = process.env.PUBLIC_URL;
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <Router basename={basename}>

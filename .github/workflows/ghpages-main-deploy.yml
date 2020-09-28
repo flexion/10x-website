@@ -1,7 +1,7 @@
 name: GH Pages Branch UI Deploy
 on:
   push:
-    branches-ignore:
+    branches:
       - "main"
 jobs:
   build:
@@ -13,7 +13,6 @@ jobs:
       - name: Set ENV Variables for React Build
         run: |
           echo "::set-env name=PUBLIC_URL::/${GITHUB_REPOSITORY##*/}/${GITHUB_REF#refs/heads/}"
-          echo "::set-env name=TARGET_FOLDER::${GITHUB_REF#refs/heads/}"
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
@@ -22,7 +21,6 @@ jobs:
       - name: Run Build
         run: |
           echo REACT PUBLIC_URL $PUBLIC_URL
-          echo GHPAGES TARGET_FOLDER $TARGET_FOLDER
           npm ci
           npm run test:coverage
           npm run build
@@ -32,4 +30,3 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           BRANCH: gh-pages
           FOLDER: build
-          TARGET_FOLDER: ${{ env.TARGET_FOLDER }}

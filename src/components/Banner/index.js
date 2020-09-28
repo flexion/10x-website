@@ -17,7 +17,7 @@ const Banner = () => {
           <div className="grid-row padding-x-2 align-items-center">
             <div className="grid-col-7 tablet:grid-col-9 padding-y-1">
               <div className="usa-banner__header-text">
-                <span class="usa-banner__flag">:flag:</span>
+                <span className="usa-banner__flag">:flag:</span>
                 <span>An official website of the United States government</span>
               </div>
             </div>
