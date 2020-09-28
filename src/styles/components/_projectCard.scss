@@ -81,4 +81,8 @@
   @include at-media("tablet") {
     column-count: 2;
   }
+
+  &.isLoading {
+    column-count: 1;
+  }
 }
