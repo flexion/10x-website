@@ -16,3 +16,4 @@ const storageMock = {
 };
 global.localStorage = { ...storageMock };
 global.sessionStorage = { ...storageMock };
+global.ga = jest.fn();
