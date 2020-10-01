@@ -20,6 +20,8 @@ i.e.
 ----------------------------------------
 */
 
+@import "~styles/theme/font-awesome/fontAwesome";
+
 @import "~styles/components/banner";
 @import "~styles/components/button";
 @import "~styles/components/card";
@@ -39,3 +41,4 @@ i.e.
 main#main-content {
   border: none;
 }
+
